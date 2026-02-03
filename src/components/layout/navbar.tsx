@@ -63,7 +63,7 @@ export function Navbar() {
         >
           <nav
             className={cn(
-              "relative flex items-center justify-between rounded-2xl px-6 py-3 transition-all duration-300",
+              "relative flex items-center justify-between rounded-2xl px-4 md:px-6 py-3 transition-all duration-300",
               isScrolled
                 ? "bg-card/80 backdrop-blur-md border border-border shadow-lg"
                 : "bg-transparent"
@@ -92,7 +92,7 @@ export function Navbar() {
             </div>
 
             {/* Actions Area */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 md:gap-3">
               <ThemeToggle />
               <LanguageSwitcher />
               
