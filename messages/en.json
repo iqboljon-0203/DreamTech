@@ -1,0 +1,249 @@
+{
+  "Metadata": {
+    "title": "Dream Tech | Turning Ideas Into Digital Reality",
+    "description": "Dream Tech is a premium IT agency specializing in web development, mobile apps, UI/UX design, and digital marketing."
+  },
+  "Navigation": {
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "startProject": "Start Project"
+  },
+  "Hero": {
+    "tagline": "Building Digital Excellence",
+    "title": {
+      "part1": "Transforming ideas into",
+      "part2": "digital reality"
+    },
+    "description": "We design and build cutting-edge websites, mobile apps, and digital solutions for forward-thinking companies. Build the future with us.",
+    "cta": "Start Project",
+    "viewWork": "View Our Work",
+    "trusted": "Powered by trusted technologies"
+  },
+  "Services": {
+    "title": "Our Services",
+    "description": "From concept to launch, we provide full-cycle digital solutions tailored to your business needs.",
+    "webDev": {
+      "title": "Web Development",
+      "description": "Modern, fast, and scalable web applications built with Next.js and React."
+    },
+    "mobileApps": {
+      "title": "Mobile Apps",
+      "description": "Native and cross-platform mobile applications for iOS and Android."
+    },
+    "uiUx": {
+      "title": "UI/UX Design",
+      "description": "Beautiful, intuitive interfaces that users love to interact with."
+    },
+    "bots": {
+      "title": "Telegram Bots",
+      "description": "Smart automation and chatbots to engage with your audience 24/7."
+    },
+    "seo": {
+      "title": "SEO & Marketing",
+      "description": "Data-driven strategies to boost your online presence and reach."
+    }
+  },
+  "Portfolio": {
+    "title": "Selected Work",
+    "description": "Explore our latest projects and see how we help businesses grow.",
+    "viewCase": "View Project",
+    "viewAll": "View All Projects",
+    "projects": {
+        "p1": { 
+          "desc": "A dedicated interactive educational environment for students and teachers. The platform creates convenient opportunities for independent student learning and helps teachers effectively organize the educational process using innovative technologies.",
+          "cat": "EdTech Platform"
+        },
+        "p2": {
+          "desc": "A specialized learning system on the Telegram platform. This bot serves to ensure constant communication between teacher and student during practice, manage tasks, and effectively organize the process.",
+          "cat": "EdTech Bot"
+        },
+        "p3": {
+          "desc": "A special mobile application ensuring effective communication between teachers and students. The platform serves to digitize the educational process, establish remote communication, and strengthen mutual cooperation.",
+          "cat": "Mobile App"
+        },
+        "p4": {
+          "desc": "An online delivery platform designed specifically for a chain of private supermarkets. The system allows customers to conveniently order products online and expands the supermarket's sales reach.",
+          "cat": "E-commerce"
+        },
+        "p5": {
+          "desc": "A website for hosting and centralized management of scientific journals published by USAT University. The platform allows forming a database of scientific articles and presenting them in electronic format.",
+          "cat": "Web Platform"
+        },
+        "p6": {
+          "desc": "A web platform specializing in the sale of medical equipment, service maintenance, and organization of special ultrasound training courses. The site allows users to purchase equipment with quality assurance, use technical services, and participate in educational programs.",
+          "cat": "MedTech"
+        },
+        "p7": {
+          "desc": "A corporate platform in the health and pharmaceutical sector. The site covers not only medicine supply but also comprehensive medical services of the company aimed at improving people's well-being.",
+          "cat": "Corporate Site"
+        },
+        "p8": {
+          "desc": "Exam system design developed specifically for an English language academy. This platform is designed to digitize the process of testing students' knowledge and organizing exams in a convenient and understandable interface.",
+          "cat": "UI/UX Design"
+        }
+    }
+  },
+  "Features": {
+    "tag": "Why Choose Us",
+    "title": "Built for excellence",
+    "description": "We combine cutting-edge technology with proven methodologies to deliver solutions that exceed expectations.",
+    "more": "And much more...",
+    "stats": {
+      "projects": "Projects Delivered",
+      "satisfaction": "Client Satisfaction",
+      "support": "Support",
+      "exp": "Years Experience"
+    },
+    "cards": {
+      "lightning": {
+        "title": "Lightning Fast",
+        "desc": "We build with performance in mind. Our applications are optimized for speed, ensuring the best user experience and SEO rankings."
+      },
+      "security": {
+        "title": "Enterprise Security",
+        "desc": "Security is not an afterthought. We implement industry-leading security practices to protect your data and your users."
+      },
+      "support": {
+        "title": "24/7 Support",
+        "desc": "Our dedicated team is always available to help. Get expert support whenever you need it, day or night."
+      },
+      "rapid": {
+        "title": "Rapid Deployment",
+        "desc": "From concept to launch in record time."
+      },
+      "clean": {
+        "title": "Clean Code",
+        "desc": "Maintainable, scalable, well-documented."
+      },
+      "delivery": {
+        "title": "On-Time Delivery",
+        "desc": "We respect deadlines, every single time."
+      }
+    }
+  },
+  "Testimonials": {
+    "title": "What our clients say",
+    "description": "Don't just take our word for it. Here's what our partners and clients have to say about working with us.",
+    "trusted": "Trusted by innovative companies",
+    "reviews": {
+        "review1": {
+            "content": "The platform exceeded our expectations. The independent learning process has become much more interesting and systematic for students. Technical solutions and design help simplify the educational process.",
+            "role": "Project Founder"
+        },
+        "review2": {
+            "content": "This Telegram bot has become our best assistant in making geography lessons interactive. Working with maps and the test system significantly increased student performance indicators.",
+            "role": "Head Teacher"
+        },
+        "review3": {
+            "content": "Launching the online trading system increased our order volume. Especially the integration between couriers and the admin panel helped us reduce delivery time and gain customer trust.",
+            "role": "Executive Director (CEO)"
+        },
+        "review4": {
+            "content": "We are grateful for the professional approach to digitizing our scientific journals. The site structure and the article database management system fully meet international standards.",
+            "role": "Vice-Rector for Scientific Affairs"
+        },
+        "review5": {
+            "content": "In medical equipment sales, trust comes first. The site design and functional capabilities played a big role in correctly conveying our company's serious status to customers.",
+            "role": "Head of Sales Department"
+        },
+        "review6": {
+            "content": "Our goal was to promote health and well-being. The site was able to reflect exactly these values. We are pleased that all our requirements were taken into account during the collaboration.",
+            "role": "Marketing Director"
+        }
+    }
+  },
+  "Calculator": {
+    "tag": "Project Estimator",
+    "title1": "Get an",
+    "title2": "instant estimate",
+    "description": "Select your project type and features to get an estimated price range. Final pricing depends on specific requirements.",
+    "step1": "What type of project do you need?",
+    "step2": "Select additional features",
+    "step3": "Select your timeline",
+    "back": "Back",
+    "continue": "Continue",
+    "getQuote": "Get Detailed Quote",
+    "from": "From",
+    "included": "Included",
+    "rushFee": "rush fee",
+    "estPrice": "Estimated Price Range",
+    "disclaimer": "This is an estimate only. Final pricing will be provided after project consultation.",
+    "types": {
+        "landing": { "name": "Landing Page", "desc": "Single page website with modern design" },
+        "website": { "name": "Business Website", "desc": "Multi-page website with CMS" },
+        "ecommerce": { "name": "E-Commerce", "desc": "Online store with payment integration" },
+        "webapp": { "name": "Web Application", "desc": "Custom web app with user authentication" },
+        "mobile": { "name": "Mobile App", "desc": "iOS & Android application" },
+        "design": { "name": "UI/UX Design", "desc": "Complete design system & prototypes" }
+    },
+    "features": {
+        "auth": "User Authentication",
+        "payments": "Payment Integration",
+        "admin": "Admin Dashboard",
+        "api": "API Integration",
+        "analytics": "Analytics & Reporting",
+        "seo": "SEO Optimization",
+        "multilang": "Multi-language Support",
+        "responsive": "Responsive Design"
+    },
+    "timelines": {
+        "standard": "Standard (8-12 weeks)",
+        "fast": "Fast Track (4-6 weeks)",
+        "urgent": "Urgent (2-4 weeks)"
+    }
+  },
+  "Contact": {
+    "tag": "Get in Touch",
+    "titlePart1": "Ready to start a",
+    "titlePart2": "new project?",
+    "description": "Let's discuss how we can bring your ideas to life. Fill out the form and we'll be in touch within 24 hours.",
+    "responseTime": "Response time",
+    "within24h": "Within 24 hours",
+    "info": {
+      "email": "Email us"
+    },
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "service": "Project Type",
+      "message": "Project Details",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "successTitle": "Message Sent!",
+      "successDesc": "Thanks for reaching out. We'll get back to you within 24 hours.",
+      "sendAnother": "Send another message",
+      "selectType": "Select a project type",
+      "types": {
+           "website": "Website Development",
+           "webapp": "Web Application",
+           "mobile": "Mobile App",
+           "ecommerce": "E-Commerce",
+           "design": "UI/UX Design",
+           "other": "Other"
+      }
+    }
+  },
+  "Footer": {
+    "ctaTitlePart1": "Let's build",
+    "ctaTitlePart2": "together",
+    "ctaDesc": "Ready to turn your ideas into digital reality? Let's discuss your project and create something extraordinary.",
+    "ctaBtn": "Start Project",
+    "brandDesc": "We turn ideas into digital reality. Premium web development, mobile apps, and design solutions.",
+    "colServices": "Services",
+    "colCompany": "Company",
+    "colResources": "Resources",
+    "remote": "Remote, Global Team",
+    "rights": "All rights reserved.",
+    "links": {
+      "careers": "Careers",
+      "blog": "Blog",
+      "docs": "Documentation",
+      "help": "Help Center",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  }
+}

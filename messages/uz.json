@@ -1,0 +1,249 @@
+{
+  "Metadata": {
+    "title": "Dream Tech | G'oyalarni Raqamli Reallikka Aylantiramiz",
+    "description": "Dream Tech - Veb dasturlash, mobil ilovalar, UI/UX dizayn va raqamli marketing bo'yicha premium IT agentligi."
+  },
+  "Navigation": {
+    "services": "Xizmatlar",
+    "portfolio": "Portfolio",
+    "about": "Biz haqimizda",
+    "pricing": "Narxlar",
+    "contact": "Aloqa",
+    "startProject": "Loyihani Boshlash"
+  },
+  "Hero": {
+    "tagline": "Raqamli Mukammallikni Yaratamiz",
+    "title": {
+      "part1": "G'oyalarni",
+      "part2": "raqamli maxsulotlarga aylantiramiz!"
+    },
+    "description": "Biz ilg'or kompaniyalar uchun zamonaviy veb-saytlar, mobil ilovalar va raqamli yechimlarni loyihalashtiramiz va yaratamiz. Kelajakni biz bilan quring.",
+    "cta": "Loyihani Boshlash",
+    "viewWork": "Ishlarimizni Ko'rish",
+    "trusted": "Ishonchli texnologiyalar asosida"
+  },
+  "Services": {
+    "title": "Bizning Xizmatlar",
+    "description": "G'oyadan to ishga tushirishgacha, biz biznesingiz ehtiyojlariga moslashtirilgan to'liq raqamli yechimlarni taklif etamiz.",
+    "webDev": {
+      "title": "Veb Dasturlash",
+      "description": "Next.js va React da zamonaviy, tez va kengayuvchan veb-ilovalar."
+    },
+    "mobileApps": {
+      "title": "Mobil Ilovalar",
+      "description": "iOS va Android uchun native va cross-platform mobil ilovalar."
+    },
+    "uiUx": {
+      "title": "UI/UX Dizayn",
+      "description": "Foydalanuvchilarga yoqadigan chiroyli va intuitiv interfeyslar."
+    },
+    "bots": {
+      "title": "Telegram Botlar",
+      "description": "Auditoriya bilan 24/7 aloqa qilish uchun aqlli avtomatlashtirish va chat-botlar."
+    },
+    "seo": {
+      "title": "SEO va Marketing",
+      "description": "Internetda ko'rinishingizni oshirish uchun ma'lumotlarga asoslangan strategiyalar."
+    }
+  },
+  "Portfolio": {
+    "title": "Bajarilgan Ishlar",
+    "description": "Bizning so'nggi loyihalarimiz va bizneslarga qanday yordam berayotganimiz bilan tanishing.",
+    "viewCase": "Saytga o'tish",
+    "viewAll": "Barcha Loyihalar",
+    "projects": {
+        "p1": { 
+          "desc": "Talabalar va o‘qituvchilar uchun mo‘ljallangan maxsus interaktiv ta'lim muhiti. Platforma talabalarga mustaqil bilim olish uchun qulay imkoniyatlar yaratadi hamda o‘qituvchilarga o‘quv jarayonini innovatsion texnologiyalar yordamida samarali tashkil etishga ko‘maklashadi.",
+          "cat": "EdTech Platform"
+        },
+        "p2": {
+          "desc": "Telegram platformasida faoliyat yurituvchi maxsus ta’lim tizimi. Ushbu bot asosan amaliyot davrida o‘qituvchi va talaba o‘rtasidagi doimiy bog‘liqlikni ta’minlash, vazifalarni boshqarish va jarayonni samarali tashkil etishga xizmat qiladi.",
+          "cat": "EdTech Bot"
+        },
+        "p3": {
+          "desc": "O‘qituvchi va talabalar o‘rtasidagi samarali aloqani ta’minlovchi maxsus mobil ilova. Platforma o‘quv jarayonini raqamlashtirish, masofaviy muloqotni yo‘lga qo‘yish va o‘zaro hamkorlikni mustahkamlashga xizmat qiladi.",
+          "cat": "Mobil Ilova"
+        },
+        "p4": {
+          "desc": "Xususiy supermarket tarmog‘i uchun maxsus ishlab chiqilgan onlayn yetkazib berish platformasi. Tizim mijozlarga mahsulotlarni qulay onlayn buyurtma qilish imkonini beradi va supermarketning savdo ko‘lamini kengaytiradi.",
+          "cat": "E-commerce"
+        },
+        "p5": {
+          "desc": "USAT universiteti tomonidan chop etiladigan ilmiy jurnallarni joylashtirish va markazlashgan holda boshqarish uchun maxsus veb-sayt. Platforma ilmiy maqolalar bazasini shakllantirish va ularni elektron formatda taqdim etish imkonini beradi.",
+          "cat": "Web Platform"
+        },
+        "p6": {
+          "desc": "Tibbiy uskunalar savdosi, servis xizmati va UZI bo‘yicha maxsus o‘quv kurslarini tashkil etishga ixtisoslashgan veb-platforma. Sayt foydalanuvchilarga sifat kafolati bilan uskunalar xarid qilish, texnik xizmatlardan foydalanish va ta'lim dasturlarida qatnashish imkonini beradi.",
+          "cat": "MedTech"
+        },
+        "p7": {
+          "desc": "Salomatlik va farmatsevtika sohasidagi korporativ platforma. Sayt kompaniyaning nafaqat dori-darmon ta'minoti, balki inson farovonligini oshirishga qaratilgan kompleks tibbiy xizmatlarini yoritib beradi.",
+          "cat": "Corporate"
+        },
+        "p8": {
+          "desc": "Ingliz tilini o‘rgatuvchi akademiya uchun maxsus ishlab chiqilgan imtihon olish tizimi dizayni. Ushbu platforma talabalarning bilimini sinash jarayonini raqamlashtirish, imtihonlarni qulay va tushunarli interfeysda tashkil etishga mo‘ljallangan.",
+          "cat": "UI/UX Dizayn"
+        }
+    }
+  },
+  "Features": {
+    "tag": "Nega Aynan Biz",
+    "title": "Mukammallik uchun yaratilgan",
+    "description": "Biz ilg'or texnologiyalarni sinovdan o'tgan metodologiyalar bilan birlashtiramiz va kutilganidan ham yuqori natijalarga erishamiz.",
+    "more": "Va yana ko'p narsalar...",
+    "stats": {
+      "projects": "Loyiha Topshirildi",
+      "satisfaction": "Mijoz Mamnuniyati",
+      "support": "Yordam Xizmati",
+      "exp": "Yillik Tajriba"
+    },
+    "cards": {
+      "lightning": {
+        "title": "Yashin Tezligida",
+        "desc": "Biz ishlash tezligiga e'tibor qaratamiz. Ilovalarimiz tezkor ishlash va SEO uchun optimallashtirilgan."
+      },
+      "security": {
+        "title": "Korporativ Xavfsizlik",
+        "desc": "Xavfsizlik ikkinchi darajali emas. Biz ma'lumotlaringizni himoya qilish uchun ilg'or usullarni qo'llaymiz."
+      },
+      "support": {
+        "title": "24/7 Qo'llab-quvvatlash",
+        "desc": "Bizning jamoamiz istalgan vaqtda yordamga tayyor. Ekspertlar ko'magini oling."
+      },
+      "rapid": {
+        "title": "Tezkor Ishga Tushirish",
+        "desc": "G'oyadan ishga tushirishgacha qisqa vaqt ichida."
+      },
+      "clean": {
+        "title": "Toza Kod",
+        "desc": "Oson o'qiladigan, kengaytirilishi mumkin bo'lgan va yaxshi hujjatlashtirilgan kod."
+      },
+      "delivery": {
+        "title": "O'z Vaqtida",
+        "desc": "Biz muddatlarga qat'iy rioya qilamiz. Har doim."
+      }
+    }
+  },
+  "Testimonials": {
+    "title": "Mijozlar Fikri",
+    "description": "Hamkorlarimiz biz bilan ishlash haqida nima deyishadi.",
+    "trusted": "Bizga ishonadigan kompaniyalar",
+    "reviews": {
+        "review1": {
+            "content": "Platforma biz kutgandan ham a’lo darajada chiqdi. Talabalar uchun mustaqil ta’lim olish jarayoni endi ancha qiziqarli va tizimli bo‘ldi. Texnik yechimlar va dizayn o‘quv jarayonini osonlashtirishga xizmat qilmoqda.",
+            "role": "Loyiha asoschisi"
+        },
+        "review2": {
+            "content": "Ushbu Telegram bot geografiya darslarimizni interaktiv qilishda eng yaxshi yordamchimizga aylandi. Xaritalar bilan ishlash va test tizimi o‘quvchilarning fanni o‘zlashtirish ko‘rsatkichini sezilarli darajada oshirdi.",
+            "role": "Bosh o‘qituvchi"
+        },
+        "review3": {
+            "content": "Onlayn savdo tizimining ishga tushishi buyurtmalar hajmini oshirdi. Ayniqsa, kuryerlar va admin panel o‘rtasidagi integratsiya bizga yetkazib berish vaqtini qisqartirish va mijozlar ishonchini qozonishga yordam berdi.",
+            "role": "Ijrochi direktor (CEO)"
+        },
+        "review4": {
+            "content": "Ilmiy jurnallarimizni raqamlashtirishda professional yondashuv uchun minnatdormiz. Saytning strukturasi va maqolalar bazasi bilan ishlash tizimi xalqaro standartlarga to‘liq javob beradi.",
+            "role": "Ilmiy ishlar bo‘yicha prorektor"
+        },
+        "review5": {
+            "content": "Tibbiy uskunalar savdosida ishonch birinchi o‘rinda turadi. Sayt dizayni va funksional imkoniyatlari kompaniyamizning jiddiy maqomini mijozlarga to‘g‘ri yetkazib berishda katta rol o‘ynadi.",
+            "role": "Savdo bo‘limi rahbari"
+        },
+        "review6": {
+            "content": "Bizning maqsadimiz — salomatlik va farovonlikni targ‘ib qilish edi. Sayt aynan shu qadriyatlarni o‘zida aks ettira oldi. Hamkorlik davomida barcha talablarimiz inobatga olinganidan mamnunmiz.",
+            "role": "Marketing direktori"
+        }
+    }
+  },
+  "Calculator": {
+    "tag": "Loyiha Hisoblagichi",
+    "title1": "Narxni",
+    "title2": "tezkor hisoblash",
+    "description": "Loyiha turini va funksiyalarini tanlang. Yakuniy narx loyiha talablariga bog'liq bo'ladi.",
+    "step1": "Sizga qanday loyiha kerak?",
+    "step2": "Qo'shimcha funksiyalarni tanlang",
+    "step3": "Muddatni tanlang",
+    "back": "Orqaga",
+    "continue": "Davom etish",
+    "getQuote": "Batafsil Hisob",
+    "from": "Oldindan",
+    "included": "Ichida",
+    "rushFee": "tezkorlik uchun",
+    "estPrice": "Tahminiy Narx",
+    "disclaimer": "Bu faqat tahminiy narx. Aniq narx maslahatlashuvdan so'ng belgilanadi.",
+    "types": {
+        "landing": { "name": "Lending Sahifa", "desc": "Zamonaviy dizaynga ega bir sahifali sayt" },
+        "website": { "name": "Biznes Sayt", "desc": "CMS tizimiga ega ko'p sahifali sayt" },
+        "ecommerce": { "name": "Elektron Do'kon", "desc": "To'lov tizimlari ulangan onlayn do'kon" },
+        "webapp": { "name": "Veb Ilova", "desc": "Foydalanuvchi tizimiga ega maxsus ilova" },
+        "mobile": { "name": "Mobil Ilova", "desc": "iOS va Android uchun ilovalar" },
+        "design": { "name": "UI/UX Dizayn", "desc": "To'liq dizayn tizimi va prototiplar" }
+    },
+    "features": {
+        "auth": "Foydalanuvchi Tizimi",
+        "payments": "To'lov Tizimi",
+        "admin": "Admin Panel",
+        "api": "API Integratsiya",
+        "analytics": "Analitika",
+        "seo": "SEO Optimizatsiya",
+        "multilang": "Ko'p tillilik",
+        "responsive": "Adaptiv Dizayn"
+    },
+    "timelines": {
+        "standard": "Standart (8-12 hafta)",
+        "fast": "Tezkor (4-6 hafta)",
+        "urgent": "Juda Tez (2-4 hafta)"
+    }
+  },
+  "Contact": {
+    "tag": "Bog'lanish",
+    "titlePart1": "Yangi loyihani",
+    "titlePart2": "boshlashga tayyormisiz?",
+    "description": "G'oyalaringizni qanday qilib hayotga tatbiq etishimizni muhokama qilaylik. Formani to'ldiring va biz 24 soat ichida siz bilan bog'lanamiz.",
+    "responseTime": "Javob vaqti",
+    "within24h": "24 soat ichida",
+    "info": {
+      "email": "Bizga yozing"
+    },
+    "form": {
+      "name": "Ismingiz",
+      "email": "Elektron pochta",
+      "service": "Loyiha turi",
+      "message": "Loyiha haqida",
+      "submit": "Yuborish",
+      "sending": "Yuborilmoqda...",
+      "successTitle": "Xabar yuborildi!",
+      "successDesc": "Murojaatingiz uchun rahmat. Tez orada siz bilan bog'lanamiz.",
+      "sendAnother": "Yana xabar yuborish",
+      "selectType": "Loyiha turini tanlang",
+      "types": {
+           "website": "Veb sayt yaratish",
+           "webapp": "Veb ilova",
+           "mobile": "Mobil ilova",
+           "ecommerce": "Elektron tijorat",
+           "design": "UI/UX Dizayn",
+           "other": "Boshqa"
+      }
+    }
+  },
+  "Footer": {
+    "ctaTitlePart1": "Birgalikda",
+    "ctaTitlePart2": "yaratamiz",
+    "ctaDesc": "G'oyalaringizni raqamli reallikka aylantirishga tayyormisiz? Loyihangizni muhokama qilamiz va ajoyib narsa yaratamiz.",
+    "ctaBtn": "Loyihani Boshlash",
+    "brandDesc": "Biz g'oyalarni raqamli loyihalarga aylantiramiz. Premium veb-saytlar, mobil ilovalar va dizayn yechimlari.",
+    "colServices": "Xizmatlar",
+    "colCompany": "Kompaniya",
+    "colResources": "Resurslar",
+    "remote": "Masofaviy, Global Jamoa",
+    "rights": "Barcha huquqlar himoyalangan.",
+    "links": {
+      "careers": "Karyera",
+      "blog": "Blog",
+      "docs": "Hujjatlar",
+      "help": "Yordam",
+      "privacy": "Maxfiylik siyosati",
+      "terms": "Foydalanish shartlari"
+    }
+  }
+}
