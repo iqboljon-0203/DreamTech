@@ -49,9 +49,9 @@ export default function Home() {
         <BackgroundBeams className="opacity-40" />
         
         {/* Gradient blobs */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-electric-blue/10 rounded-full blur-[120px]" />
-          <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-deep-purple/10 rounded-full blur-[120px]" />
+        <div className="absolute inset-0 -z-10 overflow-hidden">
+          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-electric-blue/10 rounded-full blur-[120px] transform-gpu" />
+          <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-deep-purple/10 rounded-full blur-[120px] transform-gpu" />
         </div>
 
         {/* Hero Content */}
