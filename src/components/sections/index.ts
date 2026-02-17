@@ -1,4 +1,5 @@
 // Section Components
+export { ServicesSection } from "./services";
 export { PortfolioSection } from "./portfolio";
 export { FeaturesSection } from "./features";
 export { TestimonialsSection } from "./testimonials";
