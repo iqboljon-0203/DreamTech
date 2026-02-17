@@ -16,15 +16,23 @@ export async function POST(request: Request) {
       );
     }
 
-    const text = `
-🚀 *New Project Request*
+    // Helper to escape HTML characters for Telegram
+    const escapeHtml = (unsafe: string) => {
+      return String(unsafe || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+    };
 
-👤 *Name:* ${name}
-📱 *Phone:* ${phone}
-✈️ *Telegram:* ${telegram || 'N/A'}
-🎯 *Project Type:* ${projectType}
-📝 *Message:*
-${message}
+    const text = `
+🚀 <b>New Project Request</b>
+
+👤 <b>Name:</b> ${escapeHtml(name)}
+📱 <b>Phone:</b> ${escapeHtml(phone)}
+✈️ <b>Telegram:</b> ${escapeHtml(telegram || 'N/A')}
+🎯 <b>Project Type:</b> ${escapeHtml(projectType)}
+📝 <b>Message:</b>
+${escapeHtml(message)}
     `;
 
     const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
@@ -35,7 +43,7 @@ ${message}
       body: JSON.stringify({
         chat_id: TELEGRAM_CHAT_ID,
         text: text,
-        parse_mode: 'Markdown',
+        parse_mode: 'HTML',
       }),
     });
 
