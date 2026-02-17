@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Dream Tech | Turning Ideas Into Digital Reality",
-    "description": "Dream Tech is a premium IT agency specializing in web development, mobile apps, UI/UX design, and digital marketing."
+    "title": "Dream Tech | Premium IT Agency & Software Development in Uzbekistan",
+    "description": "Dream Tech is a leading IT agency in Uzbekistan specializing in custom web development, mobile apps, Telegram bots, UI/UX design, and SEO. Transform your business with our cutting-edge digital solutions."
   },
   "Navigation": {
     "services": "Services",
@@ -53,36 +53,44 @@
     "viewAll": "View All Projects",
     "projects": {
         "p1": { 
-          "desc": "A dedicated interactive educational environment for students and teachers. The platform creates convenient opportunities for independent student learning and helps teachers effectively organize the educational process using innovative technologies.",
-          "cat": "EdTech Platform"
-        },
-        "p2": {
-          "desc": "A specialized learning system on the Telegram platform. This bot serves to ensure constant communication between teacher and student during practice, manage tasks, and effectively organize the process.",
-          "cat": "EdTech Bot"
-        },
-        "p3": {
-          "desc": "A special mobile application ensuring effective communication between teachers and students. The platform serves to digitize the educational process, establish remote communication, and strengthen mutual cooperation.",
-          "cat": "Mobile App"
-        },
-        "p4": {
-          "desc": "An online delivery platform designed specifically for a chain of private supermarkets. The system allows customers to conveniently order products online and expands the supermarket's sales reach.",
+          "desc": "Premium online store for a luxury perfume brand in Dubai, UAE. Exclusive design and convenient shopping system.",
           "cat": "E-commerce"
         },
+        "p2": {
+          "desc": "A special platform ensuring constant connection between student and teacher during the internship period.",
+          "cat": "Telegram Bot"
+        },
+        "p3": {
+          "desc": "Official web portal of USAT University. All necessary information and interactive services for applicants and students.",
+          "cat": "Web Platform"
+        },
+        "p4": {
+          "desc": "Delivery service bot for Okean Market chain. Order acceptance and courier management system.",
+          "cat": "Telegram Bot"
+        },
         "p5": {
-          "desc": "A website for hosting and centralized management of scientific journals published by USAT University. The platform allows forming a database of scientific articles and presenting them in electronic format.",
+          "desc": "Scientific journals platform for USAT University. System for electronic publication and forming a scientific database.",
           "cat": "Web Platform"
         },
         "p6": {
-          "desc": "A web platform specializing in the sale of medical equipment, service maintenance, and organization of special ultrasound training courses. The site allows users to purchase equipment with quality assurance, use technical services, and participate in educational programs.",
-          "cat": "MedTech"
+          "desc": "Corporate website for ASSI Tech company. A modern digital business card presenting company services and projects.",
+          "cat": "Corporate Site"
         },
         "p7": {
-          "desc": "A corporate platform in the health and pharmaceutical sector. The site covers not only medicine supply but also comprehensive medical services of the company aimed at improving people's well-being.",
+          "desc": "Official website of TEKGRUP manufacturing company. Product catalog and information about company activities.",
           "cat": "Corporate Site"
         },
         "p8": {
-          "desc": "Exam system design developed specifically for an English language academy. This platform is designed to digitize the process of testing students' knowledge and organizing exams in a convenient and understandable interface.",
-          "cat": "UI/UX Design"
+          "desc": "Independent learning platform. A comprehensive system combining video lessons, tests, and study materials.",
+          "cat": "EdTech"
+        },
+        "p9": {
+            "desc": "Website for Oxyzcell medical products. A platform combining health and innovative technologies.",
+            "cat": "MedTech"
+        },
+        "p10": {
+            "desc": "Special Telegram bot for real estate agents. A tool for managing client and property databases.",
+            "cat": "Telegram Bot"
         }
     }
   },
@@ -195,35 +203,119 @@
         "urgent": "Urgent (2-4 weeks)"
     }
   },
+
   "Contact": {
-    "tag": "Get in Touch",
-    "titlePart1": "Ready to start a",
-    "titlePart2": "new project?",
-    "description": "Let's discuss how we can bring your ideas to life. Fill out the form and we'll be in touch within 24 hours.",
+    "tag": "Contact",
+    "titlePart1": "Ready to start",
+    "titlePart2": "a new project?",
+    "description": "Let's discuss how we can bring your ideas to life. Fill out the form and we will reach out to you within 24 hours.",
+    "info": {
+      "telegram": "Telegram"
+    },
     "responseTime": "Response time",
     "within24h": "Within 24 hours",
-    "info": {
-      "email": "Email us"
-    },
     "form": {
-      "name": "Your Name",
-      "email": "Email Address",
-      "service": "Project Type",
-      "message": "Project Details",
-      "submit": "Send Message",
-      "sending": "Sending...",
       "successTitle": "Message Sent!",
-      "successDesc": "Thanks for reaching out. We'll get back to you within 24 hours.",
+      "successDesc": "Thank you for your request. We will be in touch shortly.",
       "sendAnother": "Send another message",
-      "selectType": "Select a project type",
+      "name": "Your Name",
+      "phone": "Phone Number",
+      "telegram": "Telegram (Optional)",
+      "phonePlaceholder": "+998 90 123 45 67",
+      "telegramPlaceholder": "@username",
+      "namePlaceholder": "Ismingiz",
+      "messagePlaceholder": "Loyiha haqida batafsil...",
+      "service": "Project Type",
+      "selectType": "Select Project Type",
+      "message": "About Project",
       "types": {
-           "website": "Website Development",
-           "webapp": "Web Application",
-           "mobile": "Mobile App",
-           "ecommerce": "E-Commerce",
-           "design": "UI/UX Design",
-           "other": "Other"
+        "website": "Website",
+        "webapp": "Web App",
+        "mobile": "Mobile App",
+        "ecommerce": "E-commerce",
+        "design": "UI/UX Design",
+        "other": "Other"
+      },
+      "submit": "Submit",
+      "sending": "Sending..."
+    }
+  },
+  "Pricing": {
+    "title": "Special Pricing Plans for You",
+    "description": "Every project requires an individual approach. Choose the optimal plan for your business growth.",
+    "order": "Order Now",
+    "webDev": {
+      "title": "Web Development",
+      "start": { 
+        "name": "Start", 
+        "price": "$150", 
+        "features": {
+            "f1": "1-page Modern Landing Page",
+            "f2": "Fully Responsive",
+            "f3": "Basic SEO",
+            "f4": "Telegram Bot Integration"
+        }, 
+        "time": "3-5 days" 
+      },
+      "pro": { 
+        "name": "Pro", 
+        "price": "$350", 
+        "badge": "Most Popular",
+        "features": {
+            "f1": "Multi-page Website",
+            "f2": "Complex Animations",
+            "f3": "Dual Language (UZ/RU)",
+            "f4": "Full Technical SEO",
+            "f5": "Schema.org Markup"
+        }, 
+        "time": "10-14 days" 
+      },
+      "premium": { 
+        "name": "Premium", 
+        "price": "$550", 
+        "features": {
+            "f1": "Exclusive Design",
+            "f2": "Three Languages (UZ/RU/EN)",
+            "f3": "Performance 95+ (Google Lighthouse)",
+            "f4": "Telegram Mini App Integration",
+            "f5": "2 Months Free Support"
+        }, 
+        "time": "20-30 days" 
       }
+    },
+    "seo": {
+      "title": "SEO & Promotion",
+      "start": { 
+        "name": "SEO Start", 
+        "price": "$80", 
+        "features": {
+            "f1": "Technical Audit",
+            "f2": "Keyword Research",
+            "f3": "Google/Yandex Maps Registration"
+        }
+      },
+      "standard": { 
+        "name": "SEO Standard", 
+        "price": "$150/mo", 
+        "features": {
+            "f1": "Monthly Content Plan (4 articles)",
+            "f2": "Competitor Analysis",
+            "f3": "Weekly Reports"
+        }
+      },
+      "pro": { 
+        "name": "SEO Pro", 
+        "price": "$250/mo", 
+        "features": {
+            "f1": "High-quality Backlinks",
+            "f2": "UX/UI Analysis for sales conversion"
+        }
+      }
+    },
+    "special": {
+      "title": "The Launch Special",
+      "desc": "Get 'Start Web' + 'SEO Start' together for a special bundle discount!",
+      "button": "Claim Offer"
     }
   },
   "Footer": {

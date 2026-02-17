@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Dream Tech | G'oyalarni Raqamli Reallikka Aylantiramiz",
-    "description": "Dream Tech - Veb dasturlash, mobil ilovalar, UI/UX dizayn va raqamli marketing bo'yicha premium IT agentligi."
+    "title": "Dream Tech | O'zbekistonda Dasturiy Ta'minot va IT Xizmatlar",
+    "description": "Dream Tech - O'zbekistondagi yetakchi IT kompaniya. Veb saytlar, mobil ilovalar, Telegram botlar yaratish, SMM va SEO xizmatlari. Biznesingizni biz bilan raqamlashtiring."
   },
   "Navigation": {
     "services": "Xizmatlar",
@@ -53,36 +53,44 @@
     "viewAll": "Barcha Loyihalar",
     "projects": {
         "p1": { 
-          "desc": "Talabalar va o‘qituvchilar uchun mo‘ljallangan maxsus interaktiv ta'lim muhiti. Platforma talabalarga mustaqil bilim olish uchun qulay imkoniyatlar yaratadi hamda o‘qituvchilarga o‘quv jarayonini innovatsion texnologiyalar yordamida samarali tashkil etishga ko‘maklashadi.",
-          "cat": "EdTech Platform"
-        },
-        "p2": {
-          "desc": "Telegram platformasida faoliyat yurituvchi maxsus ta’lim tizimi. Ushbu bot asosan amaliyot davrida o‘qituvchi va talaba o‘rtasidagi doimiy bog‘liqlikni ta’minlash, vazifalarni boshqarish va jarayonni samarali tashkil etishga xizmat qiladi.",
-          "cat": "EdTech Bot"
-        },
-        "p3": {
-          "desc": "O‘qituvchi va talabalar o‘rtasidagi samarali aloqani ta’minlovchi maxsus mobil ilova. Platforma o‘quv jarayonini raqamlashtirish, masofaviy muloqotni yo‘lga qo‘yish va o‘zaro hamkorlikni mustahkamlashga xizmat qiladi.",
-          "cat": "Mobil Ilova"
-        },
-        "p4": {
-          "desc": "Xususiy supermarket tarmog‘i uchun maxsus ishlab chiqilgan onlayn yetkazib berish platformasi. Tizim mijozlarga mahsulotlarni qulay onlayn buyurtma qilish imkonini beradi va supermarketning savdo ko‘lamini kengaytiradi.",
+          "desc": "BAA ning Dubay shahridagi hashamatli parfyumeriya brendi uchun premium onlayn do‘kon. Eksklyuziv dizayn va qulay xarid tizimi.",
           "cat": "E-commerce"
         },
+        "p2": {
+          "desc": "Amaliyot davrida talaba va o'qituvchi o'rtasidagi doimiy aloqani ta'minlovchi maxsus platforma.",
+          "cat": "Telegram Bot"
+        },
+        "p3": {
+          "desc": "USAT universiteti rasmiy veb-portali. Abituriyentlar va talabalar uchun barcha kerakli ma'lumotlar va interaktiv xizmatlar.",
+          "cat": "Web Platforma"
+        },
+        "p4": {
+          "desc": "Okean Market tarmog'i uchun yetkazib berish xizmati boti. Buyurtmalarni qabul qilish va kuryerlar bilan ishlash tizimi.",
+          "cat": "Telegram Bot"
+        },
         "p5": {
-          "desc": "USAT universiteti tomonidan chop etiladigan ilmiy jurnallarni joylashtirish va markazlashgan holda boshqarish uchun maxsus veb-sayt. Platforma ilmiy maqolalar bazasini shakllantirish va ularni elektron formatda taqdim etish imkonini beradi.",
-          "cat": "Web Platform"
+          "desc": "USAT universiteti ilmiy jurnallari platformasi. Maqolalarni elektron chop etish va ilmiy bazani shakllantirish tizimi.",
+          "cat": "Web Platforma"
         },
         "p6": {
-          "desc": "Tibbiy uskunalar savdosi, servis xizmati va UZI bo‘yicha maxsus o‘quv kurslarini tashkil etishga ixtisoslashgan veb-platforma. Sayt foydalanuvchilarga sifat kafolati bilan uskunalar xarid qilish, texnik xizmatlardan foydalanish va ta'lim dasturlarida qatnashish imkonini beradi.",
-          "cat": "MedTech"
+          "desc": "ASSI Tech kompaniyasi uchun korporativ veb-sayt. Kompaniya xizmatlari va loyihalarini taqdim etuvchi zamonaviy vizitka.",
+          "cat": "Korporativ Sayt"
         },
         "p7": {
-          "desc": "Salomatlik va farmatsevtika sohasidagi korporativ platforma. Sayt kompaniyaning nafaqat dori-darmon ta'minoti, balki inson farovonligini oshirishga qaratilgan kompleks tibbiy xizmatlarini yoritib beradi.",
-          "cat": "Corporate"
+          "desc": "TEKGRUP ishlab chiqarish kompaniyasi rasmiy sayti. Mahsulotlar katalogi va kompaniya faoliyati haqida ma'lumot.",
+          "cat": "Korporativ Sayt"
         },
         "p8": {
-          "desc": "Ingliz tilini o‘rgatuvchi akademiya uchun maxsus ishlab chiqilgan imtihon olish tizimi dizayni. Ushbu platforma talabalarning bilimini sinash jarayonini raqamlashtirish, imtihonlarni qulay va tushunarli interfeysda tashkil etishga mo‘ljallangan.",
-          "cat": "UI/UX Dizayn"
+          "desc": "Mustaqil ta'lim olish platformasi. Video darslar, testlar va o'quv materiallarini jamlagan tizim.",
+          "cat": "EdTech"
+        },
+        "p9": {
+            "desc": "Oxyzcell tibbiy mahsulotlari uchun veb-sayt. Salomatlik va innovatsion texnologiyalarni birlashtirgan platforma.",
+            "cat": "MedTech"
+        },
+        "p10": {
+            "desc": "Ko'chmas mulk agentlari (maklerlar) uchun maxsus Telegram bot. Mijozlar va uylar bazasini boshqarish vositasi.",
+            "cat": "Telegram Bot"
         }
     }
   },
@@ -195,35 +203,119 @@
         "urgent": "Juda Tez (2-4 hafta)"
     }
   },
+
   "Contact": {
     "tag": "Bog'lanish",
     "titlePart1": "Yangi loyihani",
     "titlePart2": "boshlashga tayyormisiz?",
     "description": "G'oyalaringizni qanday qilib hayotga tatbiq etishimizni muhokama qilaylik. Formani to'ldiring va biz 24 soat ichida siz bilan bog'lanamiz.",
+    "info": {
+      "telegram": "Telegram"
+    },
     "responseTime": "Javob vaqti",
     "within24h": "24 soat ichida",
-    "info": {
-      "email": "Bizga yozing"
-    },
     "form": {
-      "name": "Ismingiz",
-      "email": "Elektron pochta",
-      "service": "Loyiha turi",
-      "message": "Loyiha haqida",
-      "submit": "Yuborish",
-      "sending": "Yuborilmoqda...",
       "successTitle": "Xabar yuborildi!",
-      "successDesc": "Murojaatingiz uchun rahmat. Tez orada siz bilan bog'lanamiz.",
-      "sendAnother": "Yana xabar yuborish",
+      "successDesc": "So'rovingiz uchun tashakkur. Tez orada siz bilan bog'lanamiz.",
+      "sendAnother": "Boshqa xabar yuborish",
+      "name": "Ismingiz",
+      "phone": "Telefon raqamingiz",
+      "telegram": "Telegram (ixtiyoriy)",
+      "phonePlaceholder": "+998 90 123 45 67",
+      "telegramPlaceholder": "@username",
+      "namePlaceholder": "Ismingiz",
+      "messagePlaceholder": "Loyiha haqida batafsil...",
+      "service": "Loyiha turi",
       "selectType": "Loyiha turini tanlang",
+      "message": "Loyiha haqida",
       "types": {
-           "website": "Veb sayt yaratish",
-           "webapp": "Veb ilova",
-           "mobile": "Mobil ilova",
-           "ecommerce": "Elektron tijorat",
-           "design": "UI/UX Dizayn",
-           "other": "Boshqa"
+        "website": "Veb sayt",
+        "webapp": "Veb ilova",
+        "mobile": "Mobil ilova",
+        "ecommerce": "Elektron tijorat",
+        "design": "UI/UX Dizayn",
+        "other": "Boshqa"
+      },
+      "submit": "Yuborish",
+      "sending": "Yuborilmoqda..."
+    }
+  },
+  "Pricing": {
+    "title": "Siz uchun maxsus tariflar",
+    "description": "Har bir loyiha individual yondashuvni talab qiladi. Biznesingiz rivoji uchun eng maqbul rejani tanlang.",
+    "order": "Buyurtma Berish",
+    "webDev": {
+      "title": "Veb Dasturlash",
+      "start": { 
+        "name": "Boshlang'ich", 
+        "price": "$150", 
+        "features": {
+            "f1": "1 sahifali Zamonaviy Landing",
+            "f2": "To'liq Moslashuvchan (Responsive)",
+            "f3": "Bazaviy SEO",
+            "f4": "Telegram Bot Integratsiyasi"
+        }, 
+        "time": "3-5 kun" 
+      },
+      "pro": { 
+        "name": "Pro", 
+        "price": "$350", 
+        "badge": "Eng Mashhur",
+        "features": {
+            "f1": "Ko'p sahifali Veb-sayt",
+            "f2": "Murakkab Animatsiyalar",
+            "f3": "Ikki Til (UZ/RU)",
+            "f4": "To'liq Texnik SEO",
+            "f5": "Schema.org Belgilash"
+        }, 
+        "time": "10-14 kun" 
+      },
+      "premium": { 
+        "name": "Premium", 
+        "price": "$550", 
+        "features": {
+            "f1": "Eksklyuziv Dizayn",
+            "f2": "Uch Til (UZ/RU/EN)",
+            "f3": "Tezlik 95+ (Google Lighthouse)",
+            "f4": "Telegram Mini App Integratsiyasi",
+            "f5": "2 Oy Bepul Yordam"
+        }, 
+        "time": "20-30 kun" 
       }
+    },
+    "seo": {
+      "title": "SEO va Rivojlantirish",
+      "start": { 
+        "name": "SEO Start", 
+        "price": "$80", 
+        "features": {
+            "f1": "Texnik Audit",
+            "f2": "Kalit So'zlar Tahlili",
+            "f3": "Google/Yandex Xaritalar"
+        }
+      },
+      "standard": { 
+        "name": "SEO Standart", 
+        "price": "$150/oy", 
+        "features": {
+            "f1": "Oylik Kontent Reja (4 maqola)",
+            "f2": "Raqobatchilar Tahlili",
+            "f3": "Haftalik Hisobotlar"
+        }
+      },
+      "pro": { 
+        "name": "SEO Pro", 
+        "price": "$250/oy", 
+        "features": {
+            "f1": "Yuqori Sifatli Backlinklar",
+            "f2": "Savdo uchun UX/UI Tahlili"
+        }
+      }
+    },
+    "special": {
+      "title": "Maxsus Taklif",
+      "desc": "'Start Web' + 'SEO Start' buyurtma qiling va maxsus chegirmaga ega bo'ling!",
+      "button": "Chegirmadan Foydalanish"
     }
   },
   "Footer": {

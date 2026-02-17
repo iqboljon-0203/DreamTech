@@ -16,7 +16,8 @@ export function ContactSection() {
   const t = useTranslations("Contact");
   const [formState, setFormState] = useState({
     name: "",
-    email: "",
+    phone: "",
+    telegram: "",
     projectType: "",
     message: "",
   });
@@ -30,28 +31,27 @@ export function ContactSection() {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch("https://formsubmit.co/ajax/companydreamtech@gmail.com", {
+      const response = await fetch("/api/contact", {
           method: "POST",
           headers: { 
               "Content-Type": "application/json",
-              "Accept": "application/json"
           },
           body: JSON.stringify({
               name: formState.name,
-              email: formState.email,
-              _subject: `New Project Request from ${formState.name} (${formState.projectType})`,
+              phone: formState.phone,
+              telegram: formState.telegram,
               projectType: formState.projectType,
               message: formState.message,
-              _template: "table",
-              _captcha: "false" 
           })
       });
 
       if (response.ok) {
           setIsSubmitted(true);
-          setFormState({ name: "", email: "", projectType: "", message: "" });
+          setFormState({ name: "", phone: "", telegram: "", projectType: "", message: "" });
       } else {
-          console.error("Form submission failed");
+          const errorData = await response.json();
+          console.error("Form submission failed:", errorData);
+          alert(`Xatolik: ${errorData.error || "Xabar yuborishda xatolik yuz berdi"}`);
       }
     } catch (error) {
         console.error("Error submitting form:", error);
@@ -102,12 +102,12 @@ export function ContactSection() {
             <div className="space-y-4">
               <div className="flex items-center gap-4 p-4 rounded-xl bg-secondary/20 border border-border">
                 <div className="w-12 h-12 rounded-xl bg-electric-blue/10 flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-electric-blue" />
+                  <Send className="w-5 h-5 text-electric-blue" />
                 </div>
                 <div>
-                  <div className="text-muted-foreground text-sm">{t("info.email")}</div>
-                <a href="mailto:companydreamtech@gmail.com" className="font-semibold text-lg hover:text-electric-blue transition-colors">
-                  companydreamtech@gmail.com
+                  <div className="text-muted-foreground text-sm">{t("info.telegram")}</div>
+                <a href="https://t.me/dream_tech_manager" target="_blank" rel="noopener noreferrer" className="font-semibold text-lg hover:text-electric-blue transition-colors">
+                  @dream_tech_manager
                 </a>
                 </div>
               </div>
@@ -155,7 +155,7 @@ export function ContactSection() {
                   <button
                     onClick={() => {
                       setIsSubmitted(false);
-                      setFormState({ name: "", email: "", projectType: "", message: "" });
+                      setFormState({ name: "", phone: "", telegram: "", projectType: "", message: "" });
                     }}
                     className="text-electric-blue hover:underline"
                   >
@@ -176,23 +176,38 @@ export function ContactSection() {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 rounded-xl bg-secondary/30 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-electric-blue transition-colors"
-                      placeholder="John Doe"
+                      placeholder={t("form.namePlaceholder")}
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                      {t("form.email")}
+                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                      {t("form.phone")}
                     </label>
                     <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formState.email}
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formState.phone}
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 rounded-xl bg-secondary/30 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-electric-blue transition-colors"
-                      placeholder="john@example.com"
+                      placeholder={t("form.phonePlaceholder")}
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="telegram" className="block text-sm font-medium text-foreground mb-2">
+                       {t("form.telegram")}
+                    </label>
+                    <input
+                      type="text"
+                      id="telegram"
+                      name="telegram"
+                      value={formState.telegram}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 rounded-xl bg-secondary/30 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-electric-blue transition-colors"
+                      placeholder={t("form.telegramPlaceholder")}
                     />
                   </div>
                   
@@ -234,7 +249,7 @@ export function ContactSection() {
                       required
                       rows={4}
                       className="w-full px-4 py-3 rounded-xl bg-secondary/30 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-electric-blue transition-colors resize-none"
-                      placeholder="Tell us about your project..."
+                      placeholder={t("form.messagePlaceholder")}
                     />
                   </div>
                   

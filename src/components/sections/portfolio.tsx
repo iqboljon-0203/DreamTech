@@ -18,32 +18,33 @@ interface Project {
 const projects: Project[] = [
   {
     id: "p1",
-    title: "SoloStudy",
+    title: "Luxury Line Perfumes",
     category: "Websites",
-    image: "/portfolio/solostudy_main.jpg",
+    image: "/portfolio/luxlineuae.png",
     tags: ["HTML", "CSS", "JavaScript", "React", "Next JS"],
-    link: "https://solo-study.uz"
+    link: "https://www.luxlineuae.com/"
   },
   {
     id: "p2",
     title: "GeoEducationbot",
-    category: "Websites", // Telegram Bot
-    image: "/portfolio/geoeducation_bot.jpg",
+    category: "Telegram Bot", // Telegram Bot
+    image: "/portfolio/geoeducation_bot.png",
     tags: ["React", "Supabase", "Leaflet", "Telegram API"],
     link: "https://t.me/GeoEducationbot"
   },
   {
     id: "p3",
-    title: "Hamkor ta'lim",
-    category: "Mobile Apps",
-    image: "/portfolio/hamkor_talim.jpg",
-    tags: ["React Native", "Expo"]
+    title: "Usat.uz",
+    category: "Websites",
+    image: "/portfolio/usat_main.png",
+    tags: ["React Js", "Next Js", "Supabase","Tailwind CSS"],
+    link: "https://usat.uz/"
   },
   {
     id: "p4",
     title: "OkeanMarket",
-    category: "Websites",
-    image: "/portfolio/okean_market.jpg",
+    category: "Telegram Bot",
+    image: "/portfolio/okean_market.png",
     tags: ["React", "Vite", "Supabase", "Telegram Web App"],
     link: "https://t.me/okean_delivery_bot"
   },
@@ -51,7 +52,7 @@ const projects: Project[] = [
     id: "p5",
     title: "USAT Journal",
     category: "Websites",
-    image: "/portfolio/usat_journal.jpg",
+    image: "/portfolio/usat_journal.png",
     tags: ["Next.js", "React"],
     link: "https://journal.usat.uz"
   },
@@ -59,7 +60,7 @@ const projects: Project[] = [
     id: "p6",
     title: "ASSI Tech",
     category: "Websites",
-    image: "/portfolio/assitech_main.jpg",
+    image: "/portfolio/assitech_main.png",
     tags: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS"],
     link: "https://www.assitech.uz/"
   },
@@ -67,20 +68,37 @@ const projects: Project[] = [
     id: "p7",
     title: "TEKGRUP",
     category: "Websites",
-    image: "/portfolio/tekgrup_main.jpg",
+    image: "/portfolio/tekgrup_main.png",
     tags: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS"],
     link: "https://tekgrup.uz/"
   },
   {
     id: "p8",
-    title: "Unicum Academy",
-    category: "UI/UX",
-    image: "/portfolio/unicum_academy.jpg",
-    tags: ["Figma"]
+    title: "Solo Study",
+    category:"Websites",
+    image: "/portfolio/solostudy_main.png",
+    tags: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS"],
+    link: "https://solo-study.uz"
+  },
+  {
+    id: "p9",
+    title: "Oxyzcell",
+    category:"Websites",
+    image: "/portfolio/oxyzcell.png",
+    tags: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS", "Next JS", "Supabase"],
+    link: "https://oxyzcell.com/"
+  },
+  {
+    id: "p10",
+    title: "MaklerPro",
+    category:"Telegram Bot",
+    image: "/portfolio/maklerpro.png",
+    tags: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS", "Supabase", "Telegram API"],
+    link: "https://t.me/MaklerProBot"
   }
 ];
 
-const categories = ["All", "Websites", "Mobile Apps", "UI/UX"];
+const categories = ["All", "Websites", "Telegram Bot"];
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
   const t = useTranslations('Portfolio');

@@ -59,8 +59,18 @@ export async function generateMetadata({
       index: true,
       follow: true,
     },
+    alternates: {
+      canonical: `https://dream-tech.uz/${locale}`,
+      languages: {
+        'uz': 'https://dream-tech.uz/uz',
+        'ru': 'https://dream-tech.uz/ru',
+        'en': 'https://dream-tech.uz/en',
+      },
+    },
   };
 }
+
+import GoogleAnalytics from "@/components/analytics/google-analytics";
 
 export default async function LocaleLayout({
   children,
@@ -77,6 +87,7 @@ export default async function LocaleLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased min-h-screen`}
       >
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ''} />
         <NextIntlClientProvider messages={messages}>
           <ScrollToTop />
           <ThemeProvider
@@ -87,6 +98,31 @@ export default async function LocaleLayout({
           >
             {children}
           </ThemeProvider>
+          
+          {/* JSON-LD Schema for SEO */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Dream Tech",
+                "url": "https://dream-tech.uz",
+                "logo": "https://dream-tech.uz/logo.png",
+                "contactPoint": {
+                   "@type": "ContactPoint",
+                   "telephone": "+998 50 772 31 08",
+                   "contactType": "customer service",
+                   "areaServed": "UZ",
+                   "availableLanguage": ["Uzbek", "Russian", "English"]
+                },
+                "sameAs": [
+                  "https://t.me/dream_tech_manager",
+                  "https://instagram.com/dreamtech"
+                ]
+              })
+            }}
+          />
         </NextIntlClientProvider>
       </body>
     </html>

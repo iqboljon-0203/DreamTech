@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Link } from "@/navigation";
 import { Navbar } from "@/components/layout/navbar";
-import { Footer } from "@/components/layout/footer";
+import dynamic from 'next/dynamic';
 import { 
   Spotlight,
   BackgroundBeams,
@@ -16,19 +16,21 @@ import {
   UIUXAnimation,
 } from "@/components/aceternity";
 import { 
-  PortfolioSection,
-  FeaturesSection,
-  TestimonialsSection,
-  CalculatorSection,
-  ContactSection,
-} from "@/components/sections";
-import { 
   Code2, 
   Smartphone, 
   Palette, 
   TrendingUp,
   Bot,
 } from "lucide-react";
+
+// Lazy load heavy components
+const PortfolioSection = dynamic(() => import('@/components/sections/portfolio').then(mod => mod.PortfolioSection));
+const FeaturesSection = dynamic(() => import('@/components/sections/features').then(mod => mod.FeaturesSection));
+const TestimonialsSection = dynamic(() => import('@/components/sections/testimonials').then(mod => mod.TestimonialsSection));
+const PricingSection = dynamic(() => import('@/components/sections/pricing').then(mod => mod.PricingSection));
+const CalculatorSection = dynamic(() => import('@/components/sections/calculator').then(mod => mod.CalculatorSection));
+const ContactSection = dynamic(() => import('@/components/sections/contact').then(mod => mod.ContactSection));
+const Footer = dynamic(() => import('@/components/layout/footer').then(mod => mod.Footer));
 
 export default function Home() {
   const t = useTranslations('Hero');
@@ -186,6 +188,9 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <TestimonialsSection />
+
+      {/* Pricing Section */}
+      <PricingSection />
 
       {/* Calculator Section */}
       <CalculatorSection />
