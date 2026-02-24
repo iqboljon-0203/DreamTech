@@ -24,16 +24,9 @@ const projects: Project[] = [
     tags: ["HTML", "CSS", "JavaScript", "React", "Next JS"],
     link: "https://www.luxlineuae.com/"
   },
+ 
   {
     id: "p2",
-    title: "GeoEducationbot",
-    category: "Telegram Bot", // Telegram Bot
-    image: "/portfolio/geoeducation_bot.png",
-    tags: ["React", "Supabase", "Leaflet", "Telegram API"],
-    link: "https://t.me/GeoEducationbot"
-  },
-  {
-    id: "p3",
     title: "Usat.uz",
     category: "Websites",
     image: "/portfolio/usat_main.png",
@@ -41,12 +34,20 @@ const projects: Project[] = [
     link: "https://usat.uz/"
   },
   {
-    id: "p4",
-    title: "OkeanMarket",
-    category: "Telegram Bot",
-    image: "/portfolio/okean_market.png",
-    tags: ["React", "Vite", "Supabase", "Telegram Web App"],
-    link: "https://t.me/okean_delivery_bot"
+    id: "p3",
+    title: "Oxyzcell",
+    category:"Websites",
+    image: "/portfolio/oxyzcell.png",
+    tags: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS", "Next JS", "Supabase"],
+    link: "https://oxyzcell.com/"
+  },
+  {
+    id: "p4", 
+    title: "Fergana ATX",
+    category: "Websites",
+    image: "/portfolio/ferganaatx.png",
+    tags: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS", "Next JS"],
+    link: "https://www.ferganaatx.uz/uz"
   },
   {
     id: "p5",
@@ -80,13 +81,14 @@ const projects: Project[] = [
     tags: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS"],
     link: "https://solo-study.uz"
   },
-  {
+  
+   {
     id: "p9",
-    title: "Oxyzcell",
-    category:"Websites",
-    image: "/portfolio/oxyzcell.png",
-    tags: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS", "Next JS", "Supabase"],
-    link: "https://oxyzcell.com/"
+    title: "OkeanMarket",
+    category: "Telegram Bot",
+    image: "/portfolio/okean_market.png",
+    tags: ["React", "Vite", "Supabase", "Telegram Web App"],
+    link: "https://t.me/okean_delivery_bot"
   },
   {
     id: "p10",
@@ -95,7 +97,15 @@ const projects: Project[] = [
     image: "/portfolio/maklerpro.png",
     tags: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS", "Supabase", "Telegram API"],
     link: "https://t.me/MaklerProBot"
-  }
+  },
+   {
+    id: "p11",
+    title: "GeoEducationbot",
+    category: "Telegram Bot", // Telegram Bot
+    image: "/portfolio/geoeducation_bot.png",
+    tags: ["React", "Supabase", "Leaflet", "Telegram API"],
+    link: "https://t.me/GeoEducationbot"
+  },
 ];
 
 const categories = ["All", "Websites", "Telegram Bot"];
