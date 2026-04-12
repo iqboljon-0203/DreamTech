@@ -69,6 +69,9 @@ export async function generateMetadata({
         'en': 'https://dream-tech.uz/en',
       },
     },
+    verification: {
+      google: "HktqQ5AGAKjkVZCy58jprDQySaGqLu2mU0n14RTSEBo",
+    },
   };
 }
 
