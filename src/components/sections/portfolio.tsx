@@ -17,6 +17,22 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: "p13",
+    title: "Uuma Group",
+    category: "Websites",
+    image: "/portfolio/uuma_group.png",
+    tags: ["React", "Next JS", "Supabase", "Tailwind CSS"],
+    link: "https://www.uumagroup.uz/"
+  },
+  {
+    id: "p12",
+    title: "Siete Viajes Silk Road",
+    category: "Websites",
+    image: "/portfolio/siete_silkroad.png",
+    tags: ["React", "Next JS", "Tailwind CSS", "i18n"],
+    link: "https://www.sieteviajessilkroad.com/"
+  },
+  {
     id: "p1",
     title: "Luxury Line Perfumes",
     category: "Websites",
@@ -105,7 +121,7 @@ const projects: Project[] = [
     image: "/portfolio/geoeducation_bot.png",
     tags: ["React", "Supabase", "Leaflet", "Telegram API"],
     link: "https://t.me/GeoEducationbot"
-  },
+  }
 ];
 
 const categories = ["All", "Websites", "Telegram Bot"];

@@ -57,20 +57,20 @@
           "cat": "E-commerce"
         },
         "p2": {
-          "desc": "Amaliyot davrida talaba va o'qituvchi o'rtasidagi doimiy aloqani ta'minlovchi maxsus platforma.",
-          "cat": "Telegram Bot"
+          "desc": "USAT universiteti rasmiy veb-portali. Abituriyentlar va talabalar uchun barcha kerakli ma'lumotlar va interaktiv xizmatlar.",
+          "cat": "Veb Platforma"
         },
         "p3": {
-          "desc": "USAT universiteti rasmiy veb-portali. Abituriyentlar va talabalar uchun barcha kerakli ma'lumotlar va interaktiv xizmatlar.",
-          "cat": "Web Platforma"
+          "desc": "Oxyzcell tibbiy mahsulotlari uchun veb-sayt. Salomatlik va innovatsion texnologiyalarni birlashtirgan platforma.",
+          "cat": "MedTech"
         },
         "p4": {
-          "desc": "Okean Market tarmog'i uchun yetkazib berish xizmati boti. Buyurtmalarni qabul qilish va kuryerlar bilan ishlash tizimi.",
-          "cat": "Telegram Bot"
+          "desc": "Farg'ona ATX rasmiy veb-sayti. Tashkilot faoliyati va ko'rsatiladigan xizmatlar haqida batafsil ma'lumot.",
+          "cat": "Korporativ Sayt"
         },
         "p5": {
           "desc": "USAT universiteti ilmiy jurnallari platformasi. Maqolalarni elektron chop etish va ilmiy bazani shakllantirish tizimi.",
-          "cat": "Web Platforma"
+          "cat": "Veb Platforma"
         },
         "p6": {
           "desc": "ASSI Tech kompaniyasi uchun korporativ veb-sayt. Kompaniya xizmatlari va loyihalarini taqdim etuvchi zamonaviy vizitka.",
@@ -85,12 +85,24 @@
           "cat": "EdTech"
         },
         "p9": {
-            "desc": "Oxyzcell tibbiy mahsulotlari uchun veb-sayt. Salomatlik va innovatsion texnologiyalarni birlashtirgan platforma.",
-            "cat": "MedTech"
+            "desc": "Okean Market tarmog'i uchun yetkazib berish xizmati boti. Buyurtmalarni qabul qilish va kuryerlar bilan ishlash tizimi.",
+            "cat": "Telegram Bot"
         },
         "p10": {
             "desc": "Ko'chmas mulk agentlari (maklerlar) uchun maxsus Telegram bot. Mijozlar va uylar bazasini boshqarish vositasi.",
             "cat": "Telegram Bot"
+        },
+        "p11": {
+            "desc": "Geografiya darslari uchun interaktiv Telegram bot. Xaritalar bilan ishlash va maxsus test tizimi orqali fanni o‘zlashtirishni yengillashtiradi.",
+            "cat": "Telegram Bot"
+        },
+        "p12": {
+            "desc": "Markaziy Osiyo bo'ylab turlar va sayohatlarni taklif qiluvchi turistik kompaniya sayti. Ko'p tilli qo'llab-quvvatlash va qulay bron qilish tizimi.",
+            "cat": "Turizm va Sayohat"
+        },
+        "p13": {
+            "desc": "Uuma Group uchun E-commerce platformasi. Zamonaviy dizayn, mahsulotlar katalogi, admin panel va qulay savdo tizimi bilan ta'minlangan.",
+            "cat": "E-commerce"
         }
     }
   },

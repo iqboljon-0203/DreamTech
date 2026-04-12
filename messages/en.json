@@ -57,16 +57,16 @@
           "cat": "E-commerce"
         },
         "p2": {
-          "desc": "A special platform ensuring constant connection between student and teacher during the internship period.",
-          "cat": "Telegram Bot"
-        },
-        "p3": {
           "desc": "Official web portal of USAT University. All necessary information and interactive services for applicants and students.",
           "cat": "Web Platform"
         },
+        "p3": {
+          "desc": "Website for Oxyzcell medical products. A platform combining health and innovative technologies.",
+          "cat": "MedTech"
+        },
         "p4": {
-          "desc": "Delivery service bot for Okean Market chain. Order acceptance and courier management system.",
-          "cat": "Telegram Bot"
+          "desc": "Official website for Fergana ATX. Detailed information about the organization's activities and services.",
+          "cat": "Corporate Site"
         },
         "p5": {
           "desc": "Scientific journals platform for USAT University. System for electronic publication and forming a scientific database.",
@@ -85,12 +85,24 @@
           "cat": "EdTech"
         },
         "p9": {
-            "desc": "Website for Oxyzcell medical products. A platform combining health and innovative technologies.",
-            "cat": "MedTech"
+          "desc": "Delivery service bot for Okean Market chain. Order acceptance and courier management system.",
+          "cat": "Telegram Bot"
         },
         "p10": {
-            "desc": "Special Telegram bot for real estate agents. A tool for managing client and property databases.",
-            "cat": "Telegram Bot"
+          "desc": "Special Telegram bot for real estate agents. A tool for managing client and property databases.",
+          "cat": "Telegram Bot"
+        },
+        "p11": {
+          "desc": "Interactive Telegram bot for geography lessons. Facilitates learning the subject through map usage and a special test system.",
+          "cat": "Telegram Bot"
+        },
+        "p12": {
+          "desc": "Website for a travel company offering tours and travels across Central Asia. Multi-language support and convenient booking system.",
+          "cat": "Tourism & Travel"
+        },
+        "p13": {
+          "desc": "E-commerce platform for Uuma Group. Equipped with modern design, product catalog, admin panel, and convenient sales system.",
+          "cat": "E-commerce"
         }
     }
   },
