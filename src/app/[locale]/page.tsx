@@ -117,6 +117,12 @@ export default function Home() {
       {/* Portfolio Section */}
       <PortfolioSection />
 
+      {/* Pricing Section */}
+      <PricingSection />
+
+      {/* Calculator Section */}
+      <CalculatorSection />
+
       {/* Features Section */}
       <FeaturesSection />
 
@@ -125,12 +131,6 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <TestimonialsSection />
-
-      {/* Pricing Section */}
-      <PricingSection />
-
-      {/* Calculator Section */}
-      <CalculatorSection />
 
       {/* FAQ Section */}
       <FAQSection />
