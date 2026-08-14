@@ -100,16 +100,26 @@ export function ContactSection() {
 
             {/* Contact Info */}
             <div className="space-y-4">
-              <div className="flex items-center gap-4 p-4 rounded-xl bg-secondary/20 border border-border">
-                <div className="w-12 h-12 rounded-xl bg-electric-blue/10 flex items-center justify-center">
-                  <Send className="w-5 h-5 text-electric-blue" />
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-4 rounded-xl bg-secondary/20 border border-border">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-electric-blue/10 flex items-center justify-center">
+                    <Send className="w-5 h-5 text-electric-blue" />
+                  </div>
+                  <div>
+                    <div className="text-muted-foreground text-sm">{t("info.telegram")}</div>
+                    <a href="https://t.me/dream_tech_manager" target="_blank" rel="noopener noreferrer" className="font-semibold text-lg hover:text-electric-blue transition-colors">
+                      @dream_tech_manager
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <div className="text-muted-foreground text-sm">{t("info.telegram")}</div>
-                <a href="https://t.me/dream_tech_manager" target="_blank" rel="noopener noreferrer" className="font-semibold text-lg hover:text-electric-blue transition-colors">
-                  @dream_tech_manager
+                <a 
+                  href="https://t.me/dream_tech_manager" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="mt-2 sm:mt-0 sm:ml-auto w-full sm:w-auto text-center px-4 py-2 bg-electric-blue/10 hover:bg-electric-blue/20 text-electric-blue rounded-lg text-sm font-medium transition-colors border border-electric-blue/20"
+                >
+                  {t("quickTelegram")}
                 </a>
-                </div>
               </div>
               
               <div className="flex items-center gap-4">

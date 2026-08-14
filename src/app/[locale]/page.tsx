@@ -31,6 +31,8 @@ const FeaturesSection = dynamic(() => import('@/components/sections/features').t
 const TestimonialsSection = dynamic(() => import('@/components/sections/testimonials').then(mod => mod.TestimonialsSection));
 const PricingSection = dynamic(() => import('@/components/sections/pricing').then(mod => mod.PricingSection));
 const CalculatorSection = dynamic(() => import('@/components/sections/calculator').then(mod => mod.CalculatorSection));
+const TrustBadgesSection = dynamic(() => import('@/components/sections/trust-badges').then(mod => mod.TrustBadgesSection));
+const FAQSection = dynamic(() => import('@/components/sections/faq').then(mod => mod.FAQSection));
 const ContactSection = dynamic(() => import('@/components/sections/contact').then(mod => mod.ContactSection));
 const Footer = dynamic(() => import('@/components/layout/footer').then(mod => mod.Footer));
 
@@ -118,6 +120,9 @@ export default function Home() {
       {/* Features Section */}
       <FeaturesSection />
 
+      {/* Trust Badges Section */}
+      <TrustBadgesSection />
+
       {/* Testimonials Section */}
       <TestimonialsSection />
 
@@ -126,6 +131,9 @@ export default function Home() {
 
       {/* Calculator Section */}
       <CalculatorSection />
+
+      {/* FAQ Section */}
+      <FAQSection />
 
       {/* Contact Section */}
       <ContactSection />

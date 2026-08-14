@@ -167,7 +167,7 @@ export function FeaturesSection() {
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/5 pt-16">
           {[
-            { label: t("stats.projects"), value: "50+" },
+            { label: t("stats.projects"), value: "55+" },
             { label: t("stats.satisfaction"), value: "99%" },
             { label: t("stats.support"), value: "24/7" },
             { label: t("stats.exp"), value: "5+" },

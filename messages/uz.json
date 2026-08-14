@@ -84,14 +84,7 @@
           "desc": "Mustaqil ta'lim olish platformasi. Video darslar, testlar va o'quv materiallarini jamlagan tizim.",
           "cat": "EdTech"
         },
-        "p9": {
-            "desc": "Okean Market tarmog'i uchun yetkazib berish xizmati boti. Buyurtmalarni qabul qilish va kuryerlar bilan ishlash tizimi.",
-            "cat": "Telegram Bot"
-        },
-        "p10": {
-            "desc": "Ko'chmas mulk agentlari (maklerlar) uchun maxsus Telegram bot. Mijozlar va uylar bazasini boshqarish vositasi.",
-            "cat": "Telegram Bot"
-        },
+
         "p11": {
             "desc": "Geografiya darslari uchun interaktiv Telegram bot. Xaritalar bilan ishlash va maxsus test tizimi orqali fanni o‘zlashtirishni yengillashtiradi.",
             "cat": "Telegram Bot"
@@ -102,6 +95,30 @@
         },
         "p13": {
             "desc": "Uuma Group uchun E-commerce platformasi. Zamonaviy dizayn, mahsulotlar katalogi, admin panel va qulay savdo tizimi bilan ta'minlangan.",
+            "cat": "E-commerce"
+        },
+        "p19": {
+            "desc": "Sanoat uskunalarining holatini bashorat qilish va ishlash muddatini baholash uchun ilg'or AI tizimi.",
+            "cat": "AI Tizimlar"
+        },
+        "p14": {
+            "desc": "SANY — qurilish va tog'-kon texnikasi ishlab chiqaruvchisining O'zbekistondagi rasmiy distribyutori uchun korporativ platforma. To'liq mahsulot katalogi, lizing kalkulyatori va yirik infratuzilma loyihalari portfoliosi bilan.",
+            "cat": "Korporativ Sayt"
+        },
+        "p15": {
+            "desc": "GMP sertifikatlangan vitamin va BAA ishlab chiqaruvchi kompaniya uchun sayt. Mahsulotlar katalogi, dorixona-hamkorlar xaritasi va B2B hamkorlik arizasi tizimi bilan.",
+            "cat": "Farmatsevtika"
+        },
+        "p16": {
+            "desc": "Qadoqlash va gigiyena mahsulotlari bo'yicha B2B ulgurji savdo platformasi. To'liq katalog, savat, sevimlilar va shaxsiy kabinet funksiyalari bilan.",
+            "cat": "E-commerce / B2B"
+        },
+        "p17": {
+            "desc": "Gilam va yumshoq mebel tozalash xizmati uchun sotuvchi landing sahifa. Interaktiv narx kalkulyatori, oldin/keyin galereyasi va mijoz sharhlari bilan.",
+            "cat": "Landing"
+        },
+        "p18": {
+            "desc": "Veterinariya va agro preparatlar bo'yicha 1000+ mahsulotli onlayn katalog. Kategoriyalar bo'yicha filtrlash va mutaxassis konsultatsiyasi bloki bilan.",
             "cat": "E-commerce"
         }
     }
@@ -220,12 +237,13 @@
     "tag": "Bog'lanish",
     "titlePart1": "Yangi loyihani",
     "titlePart2": "boshlashga tayyormisiz?",
-    "description": "G'oyalaringizni qanday qilib hayotga tatbiq etishimizni muhokama qilaylik. Formani to'ldiring va biz 24 soat ichida siz bilan bog'lanamiz.",
+    "description": "G'oyalaringizni qanday qilib hayotga tatbiq etishimizni muhokama qilaylik. Formani to'ldiring va biz 1 soat ichida siz bilan bog'lanamiz.",
     "info": {
       "telegram": "Telegram"
     },
     "responseTime": "Javob vaqti",
-    "within24h": "24 soat ichida",
+    "within24h": "1 soat ichida",
+    "quickTelegram": "Hoziroq yozing!",
     "form": {
       "successTitle": "Xabar yuborildi!",
       "successDesc": "So'rovingiz uchun tashakkur. Tez orada siz bilan bog'lanamiz.",
@@ -256,6 +274,8 @@
     "title": "Siz uchun maxsus tariflar",
     "description": "Har bir loyiha individual yondashuvni talab qiladi. Biznesingiz rivoji uchun eng maqbul rejani tanlang.",
     "order": "Buyurtma Berish",
+    "included": "Kiritilgan",
+    "notIncluded": "Kiritilmagan",
     "webDev": {
       "title": "Veb Dasturlash",
       "start": { 
@@ -266,7 +286,17 @@
             "f2": "To'liq Moslashuvchan (Responsive)",
             "f3": "Bazaviy SEO",
             "f4": "Telegram Bot Integratsiyasi"
-        }, 
+        },
+        "includes": {
+            "i1": "Domen (.uz) — 1 yil",
+            "i2": "Xosting — 1 yil",
+            "i3": "SSL sertifikat",
+            "i4": "Mobil moslashuvchanlik"
+        },
+        "excludes": {
+            "e1": "Admin panel",
+            "e2": "Ko'p tillilik"
+        },
         "time": "3-5 kun" 
       },
       "pro": { 
@@ -279,7 +309,18 @@
             "f3": "Ikki Til (UZ/RU)",
             "f4": "To'liq Texnik SEO",
             "f5": "Schema.org Belgilash"
-        }, 
+        },
+        "includes": {
+            "i1": "Domen (.uz) — 1 yil",
+            "i2": "Xosting — 1 yil",
+            "i3": "SSL sertifikat",
+            "i4": "Admin panel",
+            "i5": "2 til (UZ/RU)"
+        },
+        "excludes": {
+            "e1": "Korporativ pochta",
+            "e2": "3-chi til"
+        },
         "time": "10-14 kun" 
       },
       "premium": { 
@@ -291,7 +332,17 @@
             "f3": "Tezlik 95+ (Google Lighthouse)",
             "f4": "Telegram Mini App Integratsiyasi",
             "f5": "2 Oy Bepul Yordam"
-        }, 
+        },
+        "includes": {
+            "i1": "Domen (.uz) — 1 yil",
+            "i2": "Xosting — 1 yil",
+            "i3": "SSL sertifikat",
+            "i4": "Admin panel",
+            "i5": "3 til (UZ/RU/EN)",
+            "i6": "Korporativ pochta",
+            "i7": "2 oy bepul texnik yordam"
+        },
+        "excludes": {},
         "time": "20-30 kun" 
       }
     },
@@ -330,6 +381,66 @@
       "button": "Chegirmadan Foydalanish"
     }
   },
+  "TrustBadges": {
+    "title": "Nega bizga ishonishadi",
+    "description": "Har bir loyihada sizning ishonchingiz va mamnuniyatingizni ta'minlaymiz.",
+    "badges": {
+      "contract": {
+        "title": "Rasmiy Shartnoma",
+        "desc": "Har bir loyiha rasmiy kelishuvga asoslangan. Huquqlaringiz himoyalangan."
+      },
+      "guarantee": {
+        "title": "6 Oy Kafolat",
+        "desc": "Loyiha topshirilgandan so'ng 6 oy bepul texnik qo'llab-quvvatlash."
+      },
+      "transparent": {
+        "title": "Shaffof Narxlar",
+        "desc": "Yashirin to'lovlar yo'q. Narx oldindan kelishiladi va o'zgarmaydi."
+      },
+      "security": {
+        "title": "Ma'lumot Xavfsizligi",
+        "desc": "Sizning ma'lumotlaringiz va biznes sirlaringiz to'liq himoyalangan."
+      }
+    }
+  },
+  "FAQ": {
+    "title": "Ko'p So'raladigan Savollar",
+    "description": "Mijozlarimiz eng ko'p so'raydigan savollarga javoblar.",
+    "items": {
+      "q1": {
+        "question": "To'lov qanday amalga oshadi?",
+        "answer": "To'lov ikki bosqichda amalga oshadi: loyiha boshlanishida 50% oldindan to'lov, qolgan 50% tayyor loyiha topshirilgandan so'ng. To'lovni naqd, karta yoki bank o'tkazmasi orqali amalga oshirish mumkin."
+      },
+      "q2": {
+        "question": "Loyiha muddati kechiksa nima bo'ladi?",
+        "answer": "Biz muddatlarga qat'iy rioya qilamiz. Agar biz tomondan kechikish bo'lsa, shartnomada belgilangan kompensatsiya taqdim etiladi. Har bir bosqichda sizga hisobot berib turamiz."
+      },
+      "q3": {
+        "question": "Domen va xosting narxga kiradimi?",
+        "answer": "Ha! Barcha tariflarimizga .uz domen va xosting 1 yilga bepul kiritilgan. Bundan tashqari, SSL sertifikat ham bepul taqdim etiladi."
+      },
+      "q4": {
+        "question": "Tayyor saytni keyinchalik o'zgartirish mumkinmi?",
+        "answer": "Albatta! Pro va Premium tariflarda admin panel mavjud bo'lib, siz kontentni mustaqil boshqarishingiz mumkin. Texnik o'zgartirishlar uchun esa biz doim yordamga tayyormiz."
+      },
+      "q5": {
+        "question": "Sayt SEO optimizatsiya qilinganmi?",
+        "answer": "Ha, barcha saytlarimiz bazaviy SEO optimizatsiya bilan yaratiladi: meta teglar, tezlik optimizatsiyasi, mobil moslashuvchanlik, Schema.org belgilash. Chuqurroq SEO uchun alohida tarif mavjud."
+      },
+      "q6": {
+        "question": "Texnik qo'llab-quvvatlash bormi?",
+        "answer": "Ha! Loyiha topshirilgandan so'ng 6 oy bepul texnik yordam beramiz. Bu davr ichida barcha xato va muammolarni bepul tuzatamiz. Keyin esa hamkorlikni davom ettirishingiz mumkin."
+      },
+      "q7": {
+        "question": "Telegram bot narxi qancha?",
+        "answer": "Telegram bot narxi funksionallikka qarab $80 dan boshlanadi. Oddiy buyurtma botdan tortib, to'lov tizimi integratsiyalangan murakkab botgacha — barchasi uchun individual narx kelishiladi."
+      },
+      "q8": {
+        "question": "Nima uchun Dream Tech?",
+        "answer": "55+ topshirilgan loyiha, 5+ yillik tajriba, rasmiy shartnoma, 6 oy kafolat va 1 soat ichida javob berish — biz faqat natija beramiz. SANY, Kamafarm kabi yirik brendlar bilan ishlagan tajribamiz sizning loyihangiz uchun ham ishlatiladi."
+      }
+    }
+  },
   "Footer": {
     "ctaTitlePart1": "Birgalikda",
     "ctaTitlePart2": "yaratamiz",
@@ -337,17 +448,12 @@
     "ctaBtn": "Loyihani Boshlash",
     "brandDesc": "Biz g'oyalarni raqamli loyihalarga aylantiramiz. Premium veb-saytlar, mobil ilovalar va dizayn yechimlari.",
     "colServices": "Xizmatlar",
-    "colCompany": "Kompaniya",
-    "colResources": "Resurslar",
+    "colContact": "Aloqa",
+    "colNav": "Sahifalar",
     "remote": "Masofaviy, Global Jamoa",
     "rights": "Barcha huquqlar himoyalangan.",
     "links": {
-      "careers": "Karyera",
-      "blog": "Blog",
-      "docs": "Hujjatlar",
-      "help": "Yordam",
-      "privacy": "Maxfiylik siyosati",
-      "terms": "Foydalanish shartlari"
+      "faq": "Ko'p so'raladigan savollar"
     }
   }
 }

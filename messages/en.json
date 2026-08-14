@@ -84,14 +84,7 @@
           "desc": "Independent learning platform. A comprehensive system combining video lessons, tests, and study materials.",
           "cat": "EdTech"
         },
-        "p9": {
-          "desc": "Delivery service bot for Okean Market chain. Order acceptance and courier management system.",
-          "cat": "Telegram Bot"
-        },
-        "p10": {
-          "desc": "Special Telegram bot for real estate agents. A tool for managing client and property databases.",
-          "cat": "Telegram Bot"
-        },
+
         "p11": {
           "desc": "Interactive Telegram bot for geography lessons. Facilitates learning the subject through map usage and a special test system.",
           "cat": "Telegram Bot"
@@ -102,6 +95,30 @@
         },
         "p13": {
           "desc": "E-commerce platform for Uuma Group. Equipped with modern design, product catalog, admin panel, and convenient sales system.",
+          "cat": "E-commerce"
+        },
+        "p19": {
+          "desc": "Advanced AI system to predict the state of industrial equipment and evaluate remaining useful life.",
+          "cat": "AI Systems"
+        },
+        "p14": {
+          "desc": "Corporate platform for the official distributor of SANY — a global construction and mining equipment manufacturer in Uzbekistan. Complete product catalog, leasing calculator, and portfolio of major infrastructure projects (metro, AGMK, Muruntau).",
+          "cat": "Corporate Site"
+        },
+        "p15": {
+          "desc": "Website for a GMP-certified vitamin and dietary supplement manufacturer. Product catalog, pharmacy partner map, and B2B partnership application system.",
+          "cat": "Pharmaceutical"
+        },
+        "p16": {
+          "desc": "B2B wholesale platform for packaging and hygiene products. Full catalog, cart, favorites, and personal account functionality.",
+          "cat": "E-commerce / B2B"
+        },
+        "p17": {
+          "desc": "Sales landing page for carpet and upholstery cleaning service. Interactive price calculator, before/after gallery, and customer reviews.",
+          "cat": "Landing Page"
+        },
+        "p18": {
+          "desc": "Online catalog with 1000+ veterinary and agricultural products. Category filtering and expert consultation block.",
           "cat": "E-commerce"
         }
     }
@@ -220,12 +237,13 @@
     "tag": "Contact",
     "titlePart1": "Ready to start",
     "titlePart2": "a new project?",
-    "description": "Let's discuss how we can bring your ideas to life. Fill out the form and we will reach out to you within 24 hours.",
+    "description": "Let's discuss how we can bring your ideas to life. Fill out the form and we will reach out to you within 1 hour.",
     "info": {
       "telegram": "Telegram"
     },
     "responseTime": "Response time",
-    "within24h": "Within 24 hours",
+    "within24h": "Within 1 hour",
+    "quickTelegram": "Write now!",
     "form": {
       "successTitle": "Message Sent!",
       "successDesc": "Thank you for your request. We will be in touch shortly.",
@@ -256,6 +274,8 @@
     "title": "Special Pricing Plans for You",
     "description": "Every project requires an individual approach. Choose the optimal plan for your business growth.",
     "order": "Order Now",
+    "included": "Included",
+    "notIncluded": "Not Included",
     "webDev": {
       "title": "Web Development",
       "start": { 
@@ -266,7 +286,17 @@
             "f2": "Fully Responsive",
             "f3": "Basic SEO",
             "f4": "Telegram Bot Integration"
-        }, 
+        },
+        "includes": {
+            "i1": "Domain (.uz) — 1 year",
+            "i2": "Hosting — 1 year",
+            "i3": "SSL certificate",
+            "i4": "Mobile responsiveness"
+        },
+        "excludes": {
+            "e1": "Admin panel",
+            "e2": "Multi-language"
+        },
         "time": "3-5 days" 
       },
       "pro": { 
@@ -279,7 +309,18 @@
             "f3": "Dual Language (UZ/RU)",
             "f4": "Full Technical SEO",
             "f5": "Schema.org Markup"
-        }, 
+        },
+        "includes": {
+            "i1": "Domain (.uz) — 1 year",
+            "i2": "Hosting — 1 year",
+            "i3": "SSL certificate",
+            "i4": "Admin panel",
+            "i5": "2 languages (UZ/RU)"
+        },
+        "excludes": {
+            "e1": "Corporate email",
+            "e2": "3rd language"
+        },
         "time": "10-14 days" 
       },
       "premium": { 
@@ -291,7 +332,17 @@
             "f3": "Performance 95+ (Google Lighthouse)",
             "f4": "Telegram Mini App Integration",
             "f5": "2 Months Free Support"
-        }, 
+        },
+        "includes": {
+            "i1": "Domain (.uz) — 1 year",
+            "i2": "Hosting — 1 year",
+            "i3": "SSL certificate",
+            "i4": "Admin panel",
+            "i5": "3 languages (UZ/RU/EN)",
+            "i6": "Corporate email",
+            "i7": "2 months free support"
+        },
+        "excludes": {},
         "time": "20-30 days" 
       }
     },
@@ -330,6 +381,66 @@
       "button": "Claim Offer"
     }
   },
+  "TrustBadges": {
+    "title": "Why Clients Trust Us",
+    "description": "We ensure your trust and satisfaction with every project.",
+    "badges": {
+      "contract": {
+        "title": "Official Contract",
+        "desc": "Every project is backed by an official agreement. Your rights are protected."
+      },
+      "guarantee": {
+        "title": "6 Months Guarantee",
+        "desc": "6 months of free technical support after project delivery."
+      },
+      "transparent": {
+        "title": "Transparent Pricing",
+        "desc": "No hidden fees. Price is agreed upfront and stays fixed."
+      },
+      "security": {
+        "title": "Data Security",
+        "desc": "Your data and business secrets are fully protected."
+      }
+    }
+  },
+  "FAQ": {
+    "title": "Frequently Asked Questions",
+    "description": "Answers to our clients' most common questions.",
+    "items": {
+      "q1": {
+        "question": "How does payment work?",
+        "answer": "Payment is made in two stages: 50% upfront when the project starts, and the remaining 50% after the finished project is delivered. Payment can be made via cash, card, or bank transfer."
+      },
+      "q2": {
+        "question": "What if the project deadline is delayed?",
+        "answer": "We strictly adhere to deadlines. If there is a delay on our side, compensation as specified in the contract will be provided. We report to you at every stage."
+      },
+      "q3": {
+        "question": "Are domain and hosting included in the price?",
+        "answer": "Yes! All our plans include a .uz domain and hosting free for 1 year. Additionally, an SSL certificate is also provided free of charge."
+      },
+      "q4": {
+        "question": "Can I modify the site later?",
+        "answer": "Absolutely! Pro and Premium plans include an admin panel, allowing you to manage content independently. For technical changes, we are always ready to help."
+      },
+      "q5": {
+        "question": "Is the site SEO-optimized?",
+        "answer": "Yes, all our sites are built with basic SEO optimization: meta tags, speed optimization, mobile responsiveness, Schema.org markup. For deeper SEO, a separate plan is available."
+      },
+      "q6": {
+        "question": "Is technical support available?",
+        "answer": "Yes! We provide 6 months of free technical support after project delivery. During this period, we fix all bugs and issues for free. After that, you can continue the partnership."
+      },
+      "q7": {
+        "question": "How much does a Telegram bot cost?",
+        "answer": "Telegram bot pricing starts from $80 depending on functionality. From simple order bots to complex bots with payment system integration — individual pricing is agreed for each."
+      },
+      "q8": {
+        "question": "Why choose Dream Tech?",
+        "answer": "55+ delivered projects, 5+ years of experience, official contracts, 6-month guarantee, and response within 1 hour — we only deliver results. Our experience with major brands like SANY and Kamafarm will be applied to your project too."
+      }
+    }
+  },
   "Footer": {
     "ctaTitlePart1": "Let's build",
     "ctaTitlePart2": "together",
@@ -337,17 +448,12 @@
     "ctaBtn": "Start Project",
     "brandDesc": "We turn ideas into digital reality. Premium web development, mobile apps, and design solutions.",
     "colServices": "Services",
-    "colCompany": "Company",
-    "colResources": "Resources",
+    "colContact": "Contact",
+    "colNav": "Pages",
     "remote": "Remote, Global Team",
     "rights": "All rights reserved.",
     "links": {
-      "careers": "Careers",
-      "blog": "Blog",
-      "docs": "Documentation",
-      "help": "Help Center",
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Service"
+      "faq": "FAQ"
     }
   }
 }

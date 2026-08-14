@@ -2,7 +2,7 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import { MoveRight, Zap, Check, Star, Sparkles, Rocket, Crown } from 'lucide-react';
+import { MoveRight, Zap, Check, X, Star, Sparkles, Rocket, Crown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { GlowingButton, OutlineGlowButton } from '@/components/aceternity';
 
@@ -10,6 +10,10 @@ interface PricingCardProps {
   title: string;
   price: string;
   features: string[];
+  includes?: string[];
+  excludes?: string[];
+  includedText?: string;
+  notIncludedText?: string;
   time?: string;
   popular?: boolean;
   buttonText: string;
@@ -18,7 +22,7 @@ interface PricingCardProps {
   delay?: number;
 }
 
-function PricingCard({ title, price, features, time, popular, buttonText, badgeText, icon, delay = 0 }: PricingCardProps) {
+function PricingCard({ title, price, features, includes, excludes, includedText, notIncludedText, time, popular, buttonText, badgeText, icon, delay = 0 }: PricingCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -56,7 +60,7 @@ function PricingCard({ title, price, features, time, popular, buttonText, badgeT
       </div>
 
       {/* Features */}
-      <ul className="space-y-4 mb-8 flex-grow">
+      <ul className={cn("space-y-4 flex-grow", (includes?.length || excludes?.length) ? "mb-6" : "mb-8")}>
         {features.map((feature, i) => (
           <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
             <Check className={cn("w-5 h-5 flex-shrink-0", popular ? "text-electric-blue" : "text-emerald-500")} />
@@ -64,6 +68,36 @@ function PricingCard({ title, price, features, time, popular, buttonText, badgeT
           </li>
         ))}
       </ul>
+
+      {/* Includes */}
+      {includes && includes.length > 0 && (
+        <div className={cn("mb-4", !excludes || excludes.length === 0 ? "flex-grow" : "")}>
+          <p className="text-sm font-semibold text-foreground mb-3">{includedText || "Included"}:</p>
+          <ul className="space-y-2">
+            {includes.map((inc, i) => (
+              <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                <Check className="w-4 h-4 flex-shrink-0 text-emerald-500" />
+                <span>{inc}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Excludes */}
+      {excludes && excludes.length > 0 && (
+        <div className="mb-8 flex-grow">
+          <p className="text-sm font-semibold text-foreground mb-3">{notIncludedText || "Not Included"}:</p>
+          <ul className="space-y-2">
+            {excludes.map((exc, i) => (
+              <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground/60">
+                <X className="w-4 h-4 flex-shrink-0 text-red-500/70" />
+                <span>{exc}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {/* Button */}
       <a 
@@ -164,6 +198,14 @@ export function PricingSection() {
                     // premium and pro have f5
                     ...(t.has(`webDev.${plan.key}.features.f5`) ? [t(`webDev.${plan.key}.features.f5`)] : [])
                 ]}
+                includes={[1, 2, 3, 4, 5, 6, 7]
+                  .filter(i => t.has(`webDev.${plan.key}.includes.i${i}`))
+                  .map(i => t(`webDev.${plan.key}.includes.i${i}`))}
+                excludes={[1, 2, 3, 4, 5, 6, 7]
+                  .filter(i => t.has(`webDev.${plan.key}.excludes.e${i}`))
+                  .map(i => t(`webDev.${plan.key}.excludes.e${i}`))}
+                includedText={t('included')}
+                notIncludedText={t('notIncluded')}
                 time={t(`webDev.${plan.key}.time`)}
                 popular={plan.popular}
                 badgeText={t('webDev.pro.badge')}

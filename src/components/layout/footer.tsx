@@ -18,11 +18,11 @@ import {
 } from "lucide-react";
 import { GlowingButton } from "@/components/aceternity/moving-border";
 
+import { Send } from "lucide-react";
+
 const socialLinks = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Send, href: "https://t.me/dream_tech_manager", label: "Telegram", target: "_blank" },
+  { icon: Instagram, href: "https://instagram.com/dream_tech_uz", label: "Instagram", target: "_blank" },
 ];
 
 export function Footer() {
@@ -39,22 +39,22 @@ export function Footer() {
 
   const footerLinks = {
     services: [
-      { label: tServices("webDev.title"), href: "#" },
-      { label: tServices("mobileApps.title"), href: "#" },
-      { label: tServices("uiUx.title"), href: "#" },
-      { label: tServices("seo.title"), href: "#" },
+      { label: tServices("webDev.title"), href: "#services" },
+      { label: tServices("mobileApps.title"), href: "#services" },
+      { label: tServices("uiUx.title"), href: "#services" },
+      { label: tServices("seo.title"), href: "#services" },
     ],
-    company: [
-      { label: tNav("about"), href: "#" },
+    contact: [
+      { label: t("links.faq"), href: "#faq" },
+      { label: "Telegram", href: "https://t.me/dream_tech_manager", target: "_blank" },
+      { label: "+998 50 772 31 08", href: "tel:+998507723108" },
+      { label: "companydreamtech@gmail.com", href: "mailto:companydreamtech@gmail.com" },
+    ],
+    navigation: [
+      { label: tNav("about"), href: "#about" },
       { label: tNav("portfolio"), href: "#portfolio" },
-      { label: t("links.careers"), href: "#" },
-      { label: t("links.blog"), href: "#" },
-    ],
-    resources: [
-      { label: t("links.docs"), href: "#" },
-      { label: t("links.help"), href: "#" },
-      { label: t("links.privacy"), href: "#" },
-      { label: t("links.terms"), href: "#" },
+      { label: tServices("title"), href: "#services" },
+      { label: tNav("contact"), href: "#contact" },
     ],
   };
 
@@ -144,14 +144,15 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Contact */}
           <div>
-            <h3 className="font-semibold text-white mb-4">{t("colCompany")}</h3>
+            <h3 className="font-semibold text-white mb-4">{t("colContact")}</h3>
             <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
+              {footerLinks.contact.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
+                    target={link.target}
                     className="text-sm text-muted-foreground hover:text-white transition-colors"
                   >
                     {link.label}
@@ -161,11 +162,11 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Navigation */}
           <div>
-            <h3 className="font-semibold text-white mb-4">{t("colResources")}</h3>
+            <h3 className="font-semibold text-white mb-4">{t("colNav")}</h3>
             <ul className="space-y-3">
-              {footerLinks.resources.map((link) => (
+              {footerLinks.navigation.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
@@ -188,14 +189,16 @@ export function Footer() {
           {/* Social Links */}
           <div className="flex items-center gap-4">
             {socialLinks.map((social) => (
-              <Link
+              <a
                 key={social.label}
                 href={social.href}
+                target={social.target}
+                rel="noopener noreferrer"
                 aria-label={social.label}
                 className="p-2 rounded-lg text-muted-foreground hover:text-white hover:bg-white/5 transition-all"
               >
                 <social.icon className="w-5 h-5" />
-              </Link>
+              </a>
             ))}
           </div>
         </div>

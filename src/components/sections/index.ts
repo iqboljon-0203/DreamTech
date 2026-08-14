@@ -6,3 +6,5 @@ export { TestimonialsSection } from "./testimonials";
 export { CalculatorSection } from "./calculator";
 export { PricingSection } from "./pricing";
 export { ContactSection } from "./contact";
+export { TrustBadgesSection } from "./trust-badges";
+export { FAQSection } from "./faq";

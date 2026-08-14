@@ -17,12 +17,36 @@ interface Project {
 
 const projects: Project[] = [
   {
-    id: "p13",
-    title: "Uuma Group",
+    id: "p14",
+    title: "SANY Uzbekistan",
+    category: "Korporativ",
+    image: "/portfolio/sany_uzbekistan.jpg",
+    tags: ["Next.js", "React", "Tailwind CSS"],
+    link: "https://sanyasia.uz/"
+  },
+  {
+    id: "p19",
+    title: "Sanoat AI Prognozi",
     category: "Websites",
-    image: "/portfolio/uuma_group.png",
-    tags: ["React", "Next JS", "Supabase", "Tailwind CSS"],
-    link: "https://www.uumagroup.uz/"
+    image: "/portfolio/tahlil_loyiha.jpg",
+    tags: ["React", "Vite", "Tailwind CSS", "AI"],
+    link: "https://tahlil-loyiha.vercel.app/"
+  },
+  {
+    id: "p15",
+    title: "Kamafarm Healthcare",
+    category: "Korporativ",
+    image: "/portfolio/kamafarm.jpg",
+    tags: ["Next.js", "React", "Tailwind CSS"],
+    link: "https://kamafarm.uz/"
+  },
+  {
+    id: "p16",
+    title: "UPack B2B",
+    category: "E-commerce",
+    image: "/portfolio/upack_b2b.jpg",
+    tags: ["Next.js", "React", "Tailwind CSS"],
+    link: "https://upackb2b.uz/"
   },
   {
     id: "p12",
@@ -33,37 +57,76 @@ const projects: Project[] = [
     link: "https://www.sieteviajessilkroad.com/"
   },
   {
+    id: "p4",
+    title: "Fergana ATX",
+    category: "Korporativ",
+    image: "/portfolio/ferganaatx.png",
+    tags: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS", "Next JS"],
+    link: "https://www.ferganaatx.uz/uz"
+  },
+  {
     id: "p1",
     title: "Luxury Line Perfumes",
-    category: "Websites",
+    category: "E-commerce",
     image: "/portfolio/luxlineuae.png",
     tags: ["HTML", "CSS", "JavaScript", "React", "Next JS"],
     link: "https://www.luxlineuae.com/"
   },
- 
+  {
+    id: "p13",
+    title: "Uuma Group",
+    category: "E-commerce",
+    image: "/portfolio/uuma_group.png",
+    tags: ["React", "Next JS", "Supabase", "Tailwind CSS"],
+    link: "https://www.uumagroup.uz/"
+  },
+  {
+    id: "p18",
+    title: "Top Agro Vet",
+    category: "E-commerce",
+    image: "/portfolio/top_agro_vet.jpg",
+    tags: ["Next.js", "React", "Supabase", "Tailwind CSS"],
+    link: "https://topagrovet.uz/"
+  },
+  {
+    id: "p17",
+    title: "Express Clean",
+    category: "Websites",
+    image: "/portfolio/express_clean.jpg",
+    tags: ["Next.js", "React", "Tailwind CSS"],
+    link: "https://expressclean.uz/"
+  },
   {
     id: "p2",
     title: "Usat.uz",
     category: "Websites",
     image: "/portfolio/usat_main.png",
-    tags: ["React Js", "Next Js", "Supabase","Tailwind CSS"],
+    tags: ["React Js", "Next Js", "Supabase", "Tailwind CSS"],
     link: "https://usat.uz/"
   },
   {
     id: "p3",
     title: "Oxyzcell",
-    category:"Websites",
+    category: "Websites",
     image: "/portfolio/oxyzcell.png",
     tags: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS", "Next JS", "Supabase"],
     link: "https://oxyzcell.com/"
   },
   {
-    id: "p4", 
-    title: "Fergana ATX",
-    category: "Websites",
-    image: "/portfolio/ferganaatx.png",
-    tags: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS", "Next JS"],
-    link: "https://www.ferganaatx.uz/uz"
+    id: "p6",
+    title: "ASSI Tech",
+    category: "Korporativ",
+    image: "/portfolio/assitech_main.png",
+    tags: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS"],
+    link: "https://www.assitech.uz/"
+  },
+  {
+    id: "p7",
+    title: "TEKGRUP",
+    category: "Korporativ",
+    image: "/portfolio/tekgrup_main.png",
+    tags: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS"],
+    link: "https://tekgrup.uz/"
   },
   {
     id: "p5",
@@ -74,57 +137,16 @@ const projects: Project[] = [
     link: "https://journal.usat.uz"
   },
   {
-    id: "p6",
-    title: "ASSI Tech",
-    category: "Websites",
-    image: "/portfolio/assitech_main.png",
-    tags: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS"],
-    link: "https://www.assitech.uz/"
-  },
-  {
-    id: "p7",
-    title: "TEKGRUP",
-    category: "Websites",
-    image: "/portfolio/tekgrup_main.png",
-    tags: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS"],
-    link: "https://tekgrup.uz/"
-  },
-  {
     id: "p8",
     title: "Solo Study",
-    category:"Websites",
+    category: "Websites",
     image: "/portfolio/solostudy_main.png",
     tags: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS"],
     link: "https://solo-study.uz"
-  },
-  
-   {
-    id: "p9",
-    title: "OkeanMarket",
-    category: "Telegram Bot",
-    image: "/portfolio/okean_market.png",
-    tags: ["React", "Vite", "Supabase", "Telegram Web App"],
-    link: "https://t.me/okean_delivery_bot"
-  },
-  {
-    id: "p10",
-    title: "MaklerPro",
-    category:"Telegram Bot",
-    image: "/portfolio/maklerpro.png",
-    tags: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS", "Supabase", "Telegram API"],
-    link: "https://t.me/MaklerProBot"
-  },
-   {
-    id: "p11",
-    title: "GeoEducationbot",
-    category: "Telegram Bot", // Telegram Bot
-    image: "/portfolio/geoeducation_bot.png",
-    tags: ["React", "Supabase", "Leaflet", "Telegram API"],
-    link: "https://t.me/GeoEducationbot"
   }
 ];
 
-const categories = ["All", "Websites", "Telegram Bot"];
+const categories = ["All", "Korporativ", "E-commerce", "Websites"];
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
   const t = useTranslations('Portfolio');

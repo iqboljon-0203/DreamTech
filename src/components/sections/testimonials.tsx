@@ -235,11 +235,34 @@ export function TestimonialsSection() {
         {/* Trust Badges */}
           <div className="mt-8 text-center">
             <p className="text-sm text-muted-foreground mb-6">{t("trusted")}</p>
-            <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-              {["SoloStudy", "ADTU", "OkeanMarket", "USAT", "ASSI Tech", "TEKGRUP"].map((company) => (
-                <span key={company} className="text-xl font-bold text-foreground/80 hover:text-foreground transition-colors cursor-default select-none">
-                  {company}
-                </span>
+            <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6">
+              {[
+                { name: "SANY", domain: "sanyasia.uz" },
+                { name: "Kamafarm", domain: "kamafarm.uz" },
+                { name: "UPack", domain: "upackb2b.uz" },
+                { name: "SoloStudy", domain: "solo-study.uz" },
+                { name: "ADTU", domain: "adtu.uz" },
+                { name: "USAT", domain: "usat.uz" },
+                { name: "ASSI Tech", domain: "assitech.uz" },
+                { name: "TEKGRUP", domain: "tekgrup.uz" }
+              ].map((company) => (
+                <div 
+                  key={company.name} 
+                  className="flex items-center gap-2 px-4 py-2 rounded-xl bg-secondary/20 border border-white/5 hover:bg-white/10 hover:border-white/10 transition-all cursor-default select-none group"
+                >
+                  <div className="w-6 h-6 rounded-md bg-white/5 flex items-center justify-center overflow-hidden shrink-0">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img 
+                      src={`https://www.google.com/s2/favicons?domain=${company.domain}&sz=128`} 
+                      alt={`${company.name} logo`}
+                      className="w-full h-full object-contain p-0.5 group-hover:scale-110 transition-transform duration-300"
+                      loading="lazy"
+                    />
+                  </div>
+                  <span className="text-base font-bold text-foreground/80 group-hover:text-foreground transition-colors">
+                    {company.name}
+                  </span>
+                </div>
               ))}
             </div>
           </div>

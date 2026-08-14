@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "@/navigation"; 
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Send } from "lucide-react";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 import { GlowingButton } from "@/components/aceternity/moving-border";
@@ -93,6 +93,15 @@ export function Navbar() {
 
             {/* Actions Area */}
             <div className="flex items-center gap-2 md:gap-3">
+              <a 
+                href="https://t.me/dream_tech_manager" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hidden sm:flex items-center gap-2 px-3 py-2 bg-electric-blue/10 hover:bg-electric-blue/20 text-electric-blue rounded-lg text-sm font-medium transition-colors border border-electric-blue/20"
+              >
+                <Send className="w-4 h-4" />
+                <span>Telegram</span>
+              </a>
               <ThemeToggle />
               <LanguageSwitcher />
               
