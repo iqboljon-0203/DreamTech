@@ -1,16 +1,19 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { useTranslations } from "next-intl";
-import { motion, useScroll, useTransform, useSpring, useMotionTemplate, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { ArrowButton, SectionHeader } from "@/components/ui/premium";
 
 interface Project {
   id: string;
   title: string;
-  category: string; 
-  image: string;
+  category: string;
+  image?: string;
+  // Telegram bots have no screenshot; their card renders a chat preview instead
+  bot?: { handle: string };
   tags: string[];
   link?: string;
 }
@@ -47,6 +50,14 @@ const projects: Project[] = [
     image: "/portfolio/upack_b2b.jpg",
     tags: ["Next.js", "React", "Tailwind CSS"],
     link: "https://upackb2b.uz/"
+  },
+  {
+    id: "p20",
+    title: "Toshkent Service",
+    category: "Websites",
+    image: "/portfolio/toshkent_service.jpg",
+    tags: ["Next.js", "React", "Vercel"],
+    link: "https://toshkentservice.uz/"
   },
   {
     id: "p12",
@@ -143,177 +154,191 @@ const projects: Project[] = [
     image: "/portfolio/solostudy_main.png",
     tags: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS"],
     link: "https://solo-study.uz"
+  },
+  {
+    id: "p21",
+    title: "Dream Tech",
+    category: "Korporativ",
+    image: "/portfolio/dream_tech.jpg",
+    tags: ["Next.js", "React", "Tailwind CSS", "i18n"],
+    link: "https://www.dream-tech.uz/"
+  },
+  {
+    id: "p22",
+    title: "ASF Distribution",
+    category: "Telegram Bots",
+    bot: { handle: "asfdistributionbot" },
+    tags: ["Telegram Bot", "Buyurtmalar"],
+    link: "https://t.me/asfdistributionbot"
+  },
+  {
+    id: "p23",
+    title: "Arenauz",
+    category: "Telegram Bots",
+    bot: { handle: "Arena_official_bot" },
+    tags: ["Telegram Bot", "Mini App"],
+    link: "https://t.me/Arena_official_bot"
+  },
+  {
+    id: "p24",
+    title: "Pro Hisobchi",
+    category: "Telegram Bots",
+    bot: { handle: "proh1sobchibot" },
+    tags: ["Telegram Bot", "Mini App"],
+    link: "https://t.me/proh1sobchibot"
+  },
+  {
+    id: "p25",
+    title: "OneGoPost",
+    category: "Telegram Bots",
+    bot: { handle: "onegopostbot" },
+    tags: ["Telegram Bot", "Mini App"],
+    link: "https://t.me/onegopostbot"
   }
 ];
 
-const categories = ["All", "Korporativ", "E-commerce", "Websites"];
+const categories = ["All", "Korporativ", "E-commerce", "Websites", "Telegram Bots"];
+const INITIAL_COUNT = 6;
+
+// Chat-style preview used in place of a screenshot for Telegram bot projects
+function BotPreview({ title, handle }: { title: string; handle: string }) {
+  return (
+    <div className="tone-dark dotted absolute inset-0 flex flex-col justify-between p-5 md:p-6">
+      <div className="flex items-center gap-3 pb-4 border-b border-border">
+        <div className="w-10 h-10 shrink-0 bg-foreground text-background flex items-center justify-center font-mono text-sm">
+          {title.slice(0, 2).toUpperCase()}
+        </div>
+        <div className="min-w-0">
+          <div className="text-[15px] truncate">{title}</div>
+          <div className="eyebrow text-[11px] text-muted-foreground truncate">@{handle} · bot</div>
+        </div>
+      </div>
+      <div className="flex flex-col gap-2 py-4">
+        <div className="self-end h-7 w-24 bg-foreground/90" />
+        <div className="self-start w-3/4 space-y-1.5 border border-border p-3">
+          <div className="h-1.5 w-full bg-foreground/30" />
+          <div className="h-1.5 w-2/3 bg-foreground/20" />
+        </div>
+        <div className="self-start grid grid-cols-2 gap-1.5 w-3/4">
+          <div className="h-6 border border-border" />
+          <div className="h-6 border border-border" />
+        </div>
+      </div>
+      <div className="eyebrow text-center py-2.5 bg-foreground text-background transition-opacity group-hover:opacity-85">
+        /start
+      </div>
+    </div>
+  );
+}
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
   const t = useTranslations('Portfolio');
-  const cardRef = useRef<HTMLDivElement>(null);
-  
-  // Mouse follow effect
-  const mouseX = useSpring(0, { stiffness: 500, damping: 100 });
-  const mouseY = useSpring(0, { stiffness: 500, damping: 100 });
-
-  function onMouseMove({ currentTarget, clientX, clientY }: React.MouseEvent) {
-    const { left, top } = currentTarget.getBoundingClientRect();
-    mouseX.set(clientX - left);
-    mouseY.set(clientY - top);
-  }
+  const Wrapper = project.link ? "a" : "div";
 
   return (
     <motion.div
       layout
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.9 }}
-      transition={{ duration: 0.3 }}
-      ref={cardRef}
-      onMouseMove={onMouseMove}
-      className="group relative rounded-3xl bg-secondary/10 border border-white/5 overflow-hidden flex flex-col h-full"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
     >
-      {/* Spotlight Effect */}
-      <motion.div
-        className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100"
-        style={{
-          background: useMotionTemplate`
-            radial-gradient(
-              650px circle at ${mouseX}px ${mouseY}px,
-              rgba(59, 130, 246, 0.1),
-              transparent 80%
-            )
-          `,
-        }}
-      />
+      <Wrapper
+        {...(project.link ? { href: project.link, target: "_blank", rel: "noopener noreferrer" } : {})}
+        className="group flex flex-col h-full bg-card border border-border hover:border-foreground/30 transition-colors"
+      >
+        <div className="relative aspect-[16/11] overflow-hidden bg-muted">
+          {project.bot ? (
+            <BotPreview title={project.title} handle={project.bot.handle} />
+          ) : project.image && (
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            />
+          )}
+        </div>
 
-      {/* Project Image */}
-      <div className="relative aspect-video overflow-hidden bg-secondary/50">
-        <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent z-10" />
-        <Image
-          src={project.image}
-          alt={project.title}
-          fill
-          className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        />
-      </div>
-
-      {/* Content */}
-      <div className="relative p-6 md:p-8 flex flex-col flex-grow">
-        <div className="mb-auto">
-          <span className="text-electric-blue text-sm font-medium mb-2 block">
-            {t(`projects.${project.id}.cat`)}
-          </span>
-          <div className="flex items-center justify-between gap-4 mb-4">
-            <h3 className="text-2xl font-bold text-foreground">{project.title}</h3>
-            {project.link ? (
-              <a 
-                href={project.link} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-2 rounded-full bg-white/5 hover:bg-white/10 text-muted-foreground hover:text-white transition-colors"
-                title={t('viewCase')}
-              >
-                <ArrowUpRight className="w-5 h-5" />
-              </a>
-            ) : (
-               <div className="w-9 h-9" /> 
+        <div className="flex flex-col flex-grow p-5 md:p-6">
+          <div className="eyebrow text-muted-foreground mb-4">
+            {"//"}{String(index + 1).padStart(2, "0")} · {t(`projects.${project.id}.cat`)}
+          </div>
+          <div className="flex items-start justify-between gap-4 mb-3">
+            <h3 className="text-xl font-normal tracking-tight">{project.title}</h3>
+            {project.link && (
+              <ArrowUpRight className="w-5 h-5 shrink-0 text-muted-foreground group-hover:text-foreground group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all" />
             )}
           </div>
-          
-          <p className="text-muted-foreground mb-6 line-clamp-3">
+          <p className="font-mono text-[13px] leading-relaxed text-muted-foreground line-clamp-3 mb-5">
             {t(`projects.${project.id}.desc`)}
           </p>
+          <div className="mt-auto flex flex-wrap gap-x-3 gap-y-1 pt-4 border-t border-border eyebrow text-[11px] text-muted-foreground">
+            {project.tags.slice(0, 4).map((tag) => (
+              <span key={tag}>{tag}</span>
+            ))}
+          </div>
         </div>
-
-        <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-white/5">
-          {project.tags.map((tag) => (
-            <span
-              key={tag}
-              className="px-3 py-1 rounded-full text-xs font-medium bg-white/5 text-muted-foreground border border-white/5"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
+      </Wrapper>
     </motion.div>
   );
 }
 
 export function PortfolioSection() {
   const t = useTranslations('Portfolio');
+  const tNav = useTranslations('Navigation');
   const [activeCategory, setActiveCategory] = useState("All");
+  const [showAll, setShowAll] = useState(false);
 
   const filteredProjects = projects.filter(project => {
     if (activeCategory === "All") return true;
     return project.category === activeCategory;
   });
+  const visibleProjects = showAll ? filteredProjects : filteredProjects.slice(0, INITIAL_COUNT);
 
   return (
-    <section id="portfolio" className="py-24 md:py-32 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12 md:mb-16">
-          <div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              {t('title')}
-            </h2>
-            <p className="text-muted-foreground text-base md:text-lg max-w-2xl">
-              {t('description')}
-            </p>
+    <section id="portfolio" className="tone-light dotted relative py-24 md:py-36">
+      <div className="mx-auto max-w-[1440px] px-5 md:px-10">
+        <SectionHeader eyebrow={tNav('portfolio')} title={t('title')} description={t('description')}>
+          {/* Category tabs */}
+          <div className="flex flex-wrap border border-border self-start md:self-end">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => {
+                  setActiveCategory(category);
+                  setShowAll(false);
+                }}
+                className={cn(
+                  "eyebrow px-4 h-10 transition-colors",
+                  activeCategory === category
+                    ? "bg-foreground text-background"
+                    : "text-muted-foreground hover:text-foreground"
+                )}
+              >
+                {category}
+              </button>
+            ))}
           </div>
-          
-          {/* View All Button Restored */}
-          <a href="#contact" className="hidden md:inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-colors">
-            {t('viewAll')}
-            <ArrowUpRight className="w-4 h-4" />
-          </a>
-        </div>
+        </SectionHeader>
 
-        {/* Category Filters */}
-        <div className="flex flex-wrap gap-2 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={cn(
-                "px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border",
-                activeCategory === category
-                  ? "bg-electric-blue text-white border-electric-blue shadow-[0_0_20px_rgba(59,130,246,0.5)]"
-                  : "bg-secondary/20 text-muted-foreground border-white/5 hover:bg-secondary/40 hover:text-foreground"
-              )}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-
-        <motion.div 
-          layout
-          className="grid md:grid-cols-2 gap-6 lg:gap-8"
-        >
+        <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
           <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project, index) => (
+            {visibleProjects.map((project, index) => (
               <ProjectCard key={project.id} project={project} index={index} />
             ))}
           </AnimatePresence>
         </motion.div>
-        
-        {filteredProjects.length === 0 && (
-            <div className="text-center py-20">
-                <p className="text-muted-foreground">No projects found in this category.</p>
-            </div>
+
+        {!showAll && filteredProjects.length > INITIAL_COUNT && (
+          <div className="mt-12 flex items-center justify-between gap-6 flex-wrap">
+            <p className="eyebrow text-muted-foreground">
+              {visibleProjects.length} / {filteredProjects.length}
+            </p>
+            <ArrowButton onClick={() => setShowAll(true)}>{t('viewAll')}</ArrowButton>
+          </div>
         )}
-
-        {/* Mobile View All Button */}
-        <div className="mt-12 text-center md:hidden">
-          <a href="#contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-colors">
-            {t('viewAll')}
-            <ArrowUpRight className="w-4 h-4" />
-          </a>
-        </div>
-
       </div>
     </section>
   );

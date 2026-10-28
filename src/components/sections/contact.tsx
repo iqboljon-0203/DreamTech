@@ -2,15 +2,22 @@
 import React, { useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { 
-  Send, 
-  Mail, 
-  MessageSquare,
-  CheckCircle2,
-  ArrowRight
-} from "lucide-react";
-import { cn } from "@/lib/utils";
-import { GlowingButton } from "@/components/aceternity/moving-border";
+import { ArrowUpRight, Check, ChevronDown } from "lucide-react";
+import { ArrowButton, Eyebrow, Reveal } from "@/components/ui/premium";
+
+const fieldClass =
+  "w-full bg-transparent border-0 border-b border-input py-3 text-lg font-light text-foreground placeholder:text-foreground/30 focus:outline-none focus:border-foreground transition-colors";
+
+function Field({ id, label, children }: { id: string; label: string; children: React.ReactNode }) {
+  return (
+    <div>
+      <label htmlFor={id} className="eyebrow block text-muted-foreground mb-1">
+        {label}
+      </label>
+      {children}
+    </div>
+  );
+}
 
 export function ContactSection() {
   const t = useTranslations("Contact");
@@ -29,11 +36,11 @@ export function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       const response = await fetch("/api/contact", {
           method: "POST",
-          headers: { 
+          headers: {
               "Content-Type": "application/json",
           },
           body: JSON.stringify({
@@ -68,224 +75,149 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 relative overflow-hidden border-t border-white/5">
-      {/* Background */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-electric-blue/5 rounded-full blur-[150px]" />
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-deep-purple/5 rounded-full blur-[150px]" />
-      </div>
+    <section id="contact" className="tone-dark relative py-24 md:py-36">
+      <div className="mx-auto max-w-[1440px] px-5 md:px-10 grid lg:grid-cols-12 gap-14 lg:gap-16">
+        {/* Left */}
+        <Reveal className="lg:col-span-5 flex flex-col">
+          <Eyebrow className="mb-6">{t("tag")}</Eyebrow>
+          <h2 className="display text-4xl sm:text-5xl lg:text-6xl mb-6">
+            {t("titlePart1")} <span className="text-foreground/55">{t("titlePart2")}</span>
+          </h2>
+          <p className="lead text-muted-foreground max-w-md mb-12">{t("description")}</p>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm text-muted-foreground mb-6">
-              <MessageSquare className="w-4 h-4" />
-              {t("tag")}
+          <div className="border-t border-border">
+            <a
+              href="https://t.me/dream_tech_manager"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-between py-5 border-b border-border"
+            >
+              <span>
+                <span className="eyebrow block text-muted-foreground mb-1">{t("info.telegram")}</span>
+                <span className="text-xl font-light">@dream_tech_manager</span>
+              </span>
+              <ArrowUpRight className="w-5 h-5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            </a>
+            <a href="tel:+998507723108" className="group flex items-center justify-between py-5 border-b border-border">
+              <span>
+                <span className="eyebrow block text-muted-foreground mb-1">Tel</span>
+                <span className="text-xl font-light">+998 50 772 31 08</span>
+              </span>
+              <ArrowUpRight className="w-5 h-5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            </a>
+            <div className="flex items-center justify-between py-5 border-b border-border">
+              <span className="eyebrow text-muted-foreground">{t("responseTime")}</span>
+              <span className="eyebrow">{t("within24h")}</span>
             </div>
-            
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              {t("titlePart1")}{" "}
-              <span className="gradient-text">{t("titlePart2")}</span>
-            </h2>
-            
-            <p className="text-muted-foreground text-lg mb-8">
-              {t("description")}
-            </p>
+          </div>
+        </Reveal>
 
-            {/* Contact Info */}
-            <div className="space-y-4">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-4 rounded-xl bg-secondary/20 border border-border">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-electric-blue/10 flex items-center justify-center">
-                    <Send className="w-5 h-5 text-electric-blue" />
-                  </div>
-                  <div>
-                    <div className="text-muted-foreground text-sm">{t("info.telegram")}</div>
-                    <a href="https://t.me/dream_tech_manager" target="_blank" rel="noopener noreferrer" className="font-semibold text-lg hover:text-electric-blue transition-colors">
-                      @dream_tech_manager
-                    </a>
-                  </div>
+        {/* Right form */}
+        <Reveal className="lg:col-span-7" delay={0.1}>
+          <div className="border border-border p-7 md:p-10 h-full">
+            {isSubmitted ? (
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="h-full flex flex-col items-start justify-center py-12"
+              >
+                <div className="w-12 h-12 bg-foreground text-background flex items-center justify-center mb-8">
+                  <Check className="w-5 h-5" />
                 </div>
-                <a 
-                  href="https://t.me/dream_tech_manager" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="mt-2 sm:mt-0 sm:ml-auto w-full sm:w-auto text-center px-4 py-2 bg-electric-blue/10 hover:bg-electric-blue/20 text-electric-blue rounded-lg text-sm font-medium transition-colors border border-electric-blue/20"
+                <h3 className="display text-3xl mb-3">{t("form.successTitle")}</h3>
+                <p className="lead text-muted-foreground mb-8">{t("form.successDesc")}</p>
+                <button
+                  onClick={() => setIsSubmitted(false)}
+                  className="eyebrow underline underline-offset-4 hover:opacity-70"
                 >
-                  {t("quickTelegram")}
-                </a>
-              </div>
-              
-              <div className="flex items-center gap-4">
-                <div className="flex -space-x-2">
-                  {["SC", "MP", "ER"].map((initials, i) => (
-                    <div
-                      key={i}
-                      className="w-10 h-10 rounded-full bg-gradient-to-br from-electric-blue to-deep-purple flex items-center justify-center text-white text-xs font-medium border-2 border-background"
+                  {t("form.sendAnother")}
+                </button>
+              </motion.div>
+            ) : (
+              <form onSubmit={handleSubmit} className="grid sm:grid-cols-2 gap-x-8 gap-y-8">
+                <Field id="name" label={t("form.name")}>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formState.name}
+                    onChange={handleChange}
+                    required
+                    className={fieldClass}
+                    placeholder={t("form.namePlaceholder")}
+                  />
+                </Field>
+
+                <Field id="phone" label={t("form.phone")}>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formState.phone}
+                    onChange={handleChange}
+                    required
+                    className={fieldClass}
+                    placeholder={t("form.phonePlaceholder")}
+                  />
+                </Field>
+
+                <Field id="telegram" label={t("form.telegram")}>
+                  <input
+                    type="text"
+                    id="telegram"
+                    name="telegram"
+                    value={formState.telegram}
+                    onChange={handleChange}
+                    className={fieldClass}
+                    placeholder={t("form.telegramPlaceholder")}
+                  />
+                </Field>
+
+                <Field id="projectType" label={t("form.service")}>
+                  <div className="relative">
+                    <select
+                      id="projectType"
+                      name="projectType"
+                      value={formState.projectType}
+                      onChange={handleChange}
+                      required
+                      className={`${fieldClass} appearance-none cursor-pointer pr-8`}
                     >
-                      {initials}
-                    </div>
-                  ))}
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">{t("responseTime")}</p>
-                  <p className="text-foreground font-medium">{t("within24h")}</p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
+                      <option value="" className="bg-background text-foreground">{t("form.selectType")}</option>
+                      {projectTypes.map(type => (
+                        <option key={type} value={type} className="bg-background text-foreground">
+                          {t(`form.types.${type}`)}
+                        </option>
+                      ))}
+                    </select>
+                    <ChevronDown className="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
+                  </div>
+                </Field>
 
-          {/* Right Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            <div className="p-8 rounded-2xl bg-card border border-border">
-              {isSubmitted ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="text-center py-12"
-                >
-                  <div className="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle2 className="w-8 h-8 text-green-500" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-2">{t("form.successTitle")}</h3>
-                  <p className="text-muted-foreground mb-6">
-                    {t("form.successDesc")}
-                  </p>
-                  <button
-                    onClick={() => {
-                      setIsSubmitted(false);
-                      setFormState({ name: "", phone: "", telegram: "", projectType: "", message: "" });
-                    }}
-                    className="text-electric-blue hover:underline"
-                  >
-                    {t("form.sendAnother")}
-                  </button>
-                </motion.div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                      {t("form.name")}
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formState.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 rounded-xl bg-secondary/30 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-electric-blue transition-colors"
-                      placeholder={t("form.namePlaceholder")}
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
-                      {t("form.phone")}
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formState.phone}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 rounded-xl bg-secondary/30 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-electric-blue transition-colors"
-                      placeholder={t("form.phonePlaceholder")}
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="telegram" className="block text-sm font-medium text-foreground mb-2">
-                       {t("form.telegram")}
-                    </label>
-                    <input
-                      type="text"
-                      id="telegram"
-                      name="telegram"
-                      value={formState.telegram}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl bg-secondary/30 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-electric-blue transition-colors"
-                      placeholder={t("form.telegramPlaceholder")}
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="projectType" className="block text-sm font-medium text-foreground mb-2">
-                      {t("form.service")}
-                    </label>
-                    <div className="relative">
-                      <select
-                        id="projectType"
-                        name="projectType"
-                        value={formState.projectType}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 rounded-xl bg-secondary/30 border border-border text-foreground focus:outline-none focus:border-electric-blue transition-colors appearance-none cursor-pointer pr-10"
-                      >
-                        <option value="" className="bg-background text-foreground">{t("form.selectType")}</option>
-                        {projectTypes.map(type => (
-                          <option key={type} value={type} className="bg-background text-foreground">
-                            {t(`form.types.${type}`)}
-                          </option>
-                        ))}
-                      </select>
-                      <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none">
-                        <ArrowRight className="w-4 h-4 text-muted-foreground rotate-90" />
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                      {t("form.message")}
-                    </label>
+                <div className="sm:col-span-2">
+                  <Field id="message" label={t("form.message")}>
                     <textarea
                       id="message"
                       name="message"
                       value={formState.message}
                       onChange={handleChange}
                       required
-                      rows={4}
-                      className="w-full px-4 py-3 rounded-xl bg-secondary/30 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-electric-blue transition-colors resize-none"
+                      rows={3}
+                      className={`${fieldClass} resize-none`}
                       placeholder={t("form.messagePlaceholder")}
                     />
-                  </div>
-                  
-                  <GlowingButton
-                    className="w-full"
-                    disabled={isSubmitting}
-                  >
-                    <span className="flex items-center justify-center gap-2 w-full">
-                    {isSubmitting ? (
-                      <>
-                        <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                        {t("form.sending")}
-                      </>
-                    ) : (
-                      <>
-                        {t("form.submit")}
-                        <Send className="w-4 h-4" />
-                      </>
-                    )}
-                    </span>
-                  </GlowingButton>
-                </form>
-              )}
-            </div>
-          </motion.div>
-        </div>
+                  </Field>
+                </div>
+
+                <div className="sm:col-span-2 pt-2">
+                  <ArrowButton type="submit" disabled={isSubmitting}>
+                    {isSubmitting ? t("form.sending") : t("form.submit")}
+                  </ArrowButton>
+                </div>
+              </form>
+            )}
+          </div>
+        </Reveal>
       </div>
     </section>
   );

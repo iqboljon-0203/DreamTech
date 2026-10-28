@@ -1,116 +1,50 @@
 "use client";
 import React from "react";
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
-import { 
-  FileText, 
-  ShieldCheck, 
-  BadgeDollarSign, 
-  Lock 
-} from "lucide-react";
-import { cn } from "@/lib/utils";
+import { FileText, ShieldCheck, BadgeDollarSign, Lock } from "lucide-react";
+import { Eyebrow, Reveal } from "@/components/ui/premium";
+import { DotField } from "@/components/ui/dot-field";
 
-interface Badge {
-  icon: React.ElementType;
-  key: string;
-  gradient: string;
-  iconColor: string;
-}
-
-function BadgeCard({ badge, index }: { badge: Badge; index: number }) {
-  const t = useTranslations("TrustBadges");
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group relative p-6 md:p-8 rounded-3xl border border-white/5 bg-secondary/10 hover:bg-secondary/20 transition-all duration-300 overflow-hidden"
-    >
-      <div className={cn(
-        "absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-gradient-to-br",
-        badge.gradient
-      )} />
-      
-      <div className="relative flex flex-col items-center text-center gap-4">
-        <div className={cn(
-          "w-16 h-16 rounded-2xl flex items-center justify-center transition-colors duration-300 bg-white/5 group-hover:bg-white/10 shadow-lg",
-        )}>
-          <badge.icon className={cn("w-8 h-8", badge.iconColor)} />
-        </div>
-        
-        <div>
-          <h3 className="text-xl font-bold mb-3 text-foreground">
-            {t(`badges.${badge.key}.title`)}
-          </h3>
-          <p className="text-muted-foreground leading-relaxed text-sm">
-            {t(`badges.${badge.key}.desc`)}
-          </p>
-        </div>
-      </div>
-    </motion.div>
-  );
-}
+const badges = [
+  { icon: FileText, key: "contract" },
+  { icon: ShieldCheck, key: "guarantee" },
+  { icon: BadgeDollarSign, key: "transparent" },
+  { icon: Lock, key: "security" },
+];
 
 export function TrustBadgesSection() {
   const t = useTranslations("TrustBadges");
 
-  const badges: Badge[] = [
-    {
-      icon: FileText,
-      key: "contract",
-      gradient: "from-blue-500 to-cyan-500",
-      iconColor: "text-blue-400"
-    },
-    {
-      icon: ShieldCheck,
-      key: "guarantee",
-      gradient: "from-green-500 to-emerald-500",
-      iconColor: "text-emerald-400"
-    },
-    {
-      icon: BadgeDollarSign,
-      key: "transparent",
-      gradient: "from-yellow-500 to-orange-500",
-      iconColor: "text-yellow-400"
-    },
-    {
-      icon: Lock,
-      key: "security",
-      gradient: "from-purple-500 to-pink-500",
-      iconColor: "text-purple-400"
-    }
-  ];
-
   return (
-    <section className="py-20 md:py-24 relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[300px] bg-electric-blue/5 blur-[120px] -z-10" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold mb-6"
-          >
-            {t("title")}
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
-          >
-            {t("description")}
-          </motion.p>
+    <section className="grid lg:grid-cols-2">
+      {/* Visual half */}
+      <div className="tone-dark relative min-h-[320px] lg:min-h-[720px] overflow-hidden">
+        <DotField spacing={10} />
+        <div className="absolute inset-0 bg-gradient-to-tr from-background via-transparent to-transparent" />
+        <div className="absolute left-5 md:left-10 bottom-8 md:bottom-12 right-5 grid grid-cols-2 gap-6 max-w-md">
+          {["contract", "guarantee"].map((key) => (
+            <p key={key} className="eyebrow text-foreground/70">{t(`badges.${key}.title`)}</p>
+          ))}
         </div>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {badges.map((badge, index) => (
-            <BadgeCard key={badge.key} badge={badge} index={index} />
+      {/* Content half */}
+      <div className="tone-light dotted px-5 md:px-12 lg:px-16 py-20 md:py-28">
+        <Reveal>
+          <Eyebrow className="mb-6">Dream Tech</Eyebrow>
+          <h2 className="display text-4xl sm:text-5xl mb-6">{t("title")}</h2>
+          <p className="lead text-muted-foreground max-w-lg mb-14">{t("description")}</p>
+        </Reveal>
+
+        <div className="grid sm:grid-cols-2 gap-x-10 gap-y-12">
+          {badges.map(({ icon: Icon, key }, i) => (
+            <Reveal key={key} delay={i * 0.07}>
+              <Icon className="w-9 h-9 mb-6" strokeWidth={1} />
+              <h3 className="font-mono text-[17px] font-medium mb-3">{t(`badges.${key}.title`)}</h3>
+              <p className="text-[15px] font-light leading-relaxed text-muted-foreground">
+                {t(`badges.${key}.desc`)}
+              </p>
+            </Reveal>
           ))}
         </div>
       </div>

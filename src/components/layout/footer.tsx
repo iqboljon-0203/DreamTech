@@ -1,206 +1,128 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "@/navigation";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { useTheme } from "next-themes";
 import { useTranslations } from "next-intl";
-import { BrandLogo } from "@/components/brand-logo";
-import { 
-  Github, 
-  Twitter, 
-  Linkedin, 
-  Instagram,
-  Mail,
-  MapPin,
-  Phone,
-  ArrowUpRight
-} from "lucide-react";
-import { GlowingButton } from "@/components/aceternity/moving-border";
-
-import { Send } from "lucide-react";
+import { Instagram, Send } from "lucide-react";
+import { ArrowButton, Eyebrow, Reveal } from "@/components/ui/premium";
+import { DotField } from "@/components/ui/dot-field";
 
 const socialLinks = [
-  { icon: Send, href: "https://t.me/dream_tech_manager", label: "Telegram", target: "_blank" },
-  { icon: Instagram, href: "https://instagram.com/dream_tech_uz", label: "Instagram", target: "_blank" },
+  { icon: Send, href: "https://t.me/dream_tech_manager", label: "Telegram" },
+  { icon: Instagram, href: "https://instagram.com/dream_tech_uz", label: "Instagram" },
 ];
 
 export function Footer() {
   const t = useTranslations("Footer");
   const tServices = useTranslations("Services");
   const tNav = useTranslations("Navigation");
-  
-  const [mounted, setMounted] = useState(false);
-  const { resolvedTheme } = useTheme();
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const footerLinks = {
-    services: [
-      { label: tServices("webDev.title"), href: "#services" },
-      { label: tServices("mobileApps.title"), href: "#services" },
-      { label: tServices("uiUx.title"), href: "#services" },
-      { label: tServices("seo.title"), href: "#services" },
-    ],
-    contact: [
-      { label: t("links.faq"), href: "#faq" },
-      { label: "Telegram", href: "https://t.me/dream_tech_manager", target: "_blank" },
-      { label: "+998 50 772 31 08", href: "tel:+998507723108" },
-      { label: "companydreamtech@gmail.com", href: "mailto:companydreamtech@gmail.com" },
-    ],
-    navigation: [
-      { label: tNav("about"), href: "#about" },
-      { label: tNav("portfolio"), href: "#portfolio" },
-      { label: tServices("title"), href: "#services" },
-      { label: tNav("contact"), href: "#contact" },
-    ],
-  };
+  const columns = [
+    {
+      title: t("colServices"),
+      links: [
+        { label: tServices("webDev.title"), href: "#services" },
+        { label: tServices("mobileApps.title"), href: "#services" },
+        { label: tServices("uiUx.title"), href: "#services" },
+        { label: tServices("seo.title"), href: "#services" },
+      ],
+    },
+    {
+      title: t("colNav"),
+      links: [
+        { label: tNav("portfolio"), href: "#portfolio" },
+        { label: tNav("about"), href: "#features" },
+        { label: tNav("pricing"), href: "#pricing" },
+        { label: t("links.faq"), href: "#faq" },
+      ],
+    },
+    {
+      title: t("colContact"),
+      links: [
+        { label: "Telegram", href: "https://t.me/dream_tech_manager", external: true },
+        { label: "+998 50 772 31 08", href: "tel:+998507723108" },
+        { label: "companydreamtech@gmail.com", href: "mailto:companydreamtech@gmail.com" },
+      ],
+    },
+  ];
 
   return (
-    <footer className="relative border-t border-white/5 bg-background">
-      {/* Background gradient */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-electric-blue/5 rounded-full blur-[128px]" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-deep-purple/5 rounded-full blur-[128px]" />
-      </div>
+    <footer className="tone-dark relative">
+      {/* CTA */}
+      <section className="relative overflow-hidden border-t border-border">
+        <DotField spacing={11} />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />
+        <Reveal className="relative mx-auto max-w-[1440px] px-5 md:px-10 py-28 md:py-40">
+          <Eyebrow className="mb-6">{tNav("contact")}</Eyebrow>
+          <h2 className="display text-5xl sm:text-6xl lg:text-7xl mb-6 max-w-3xl">
+            {t("ctaTitlePart1")} <span className="text-foreground/55">{t("ctaTitlePart2")}</span>
+          </h2>
+          <p className="lead text-foreground/70 max-w-xl mb-10">{t("ctaDesc")}</p>
+          <div className="flex flex-wrap gap-3">
+            <ArrowButton href="https://t.me/dream_tech_manager" external>
+              {t("ctaBtn")}
+            </ArrowButton>
+            <ArrowButton href="mailto:companydreamtech@gmail.com" variant="outline">
+              companydreamtech@gmail.com
+            </ArrowButton>
+          </div>
+        </Reveal>
+      </section>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* CTA Section */}
-        <div className="py-16 md:py-24 border-b border-white/5">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              {t("ctaTitlePart1")}{" "}
-              <span className="gradient-text">{t("ctaTitlePart2")}</span>
-            </h2>
-            <p className="text-muted-foreground text-lg mb-8">
-              {t("ctaDesc")}
+      {/* Links */}
+      <div className="mx-auto max-w-[1440px] px-5 md:px-10 pt-16 md:pt-20 border-t border-border">
+        <div className="grid grid-cols-2 lg:grid-cols-12 gap-10 pb-16">
+          <div className="col-span-2 lg:col-span-5">
+            <p className="font-light text-muted-foreground max-w-sm mb-6">{t("brandDesc")}</p>
+            <p className="eyebrow text-muted-foreground max-w-sm leading-relaxed">
+              Andijon shahri, Bobur shoh ko‘chasi, &ldquo;Digital City&rdquo; binosi
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://t.me/dream_tech_manager" target="_blank" rel="noopener noreferrer">
-                <GlowingButton className="px-8 py-4 text-base">
-                  {t("ctaBtn")}
-                  <ArrowUpRight className="ml-2 w-4 h-4 inline" />
-                </GlowingButton>
-              </a>
-              <a
-                href="mailto:companydreamtech@gmail.com"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-xl border border-border text-foreground font-semibold hover:bg-muted transition-colors"
-              >
-                <Mail className="mr-2 w-4 h-4" />
-                companydreamtech@gmail.com
-              </a>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Links Grid */}
-        <div className="py-12 md:py-16 grid grid-cols-2 md:grid-cols-5 gap-8">
-          {/* Brand */}
-          <div className="col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <BrandLogo className="w-8 h-8" />
-              <span className="text-lg font-bold text-foreground">
-                Dream<span className="text-muted-foreground">Tech</span>
-              </span>
-            </Link>
-            <p className="text-muted-foreground text-sm mb-6 max-w-xs">
-              {t("brandDesc")}
-            </p>
-            {/* Contact Info */}
-            <div className="space-y-2 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 shrink-0" />
-                <span>Andijon shahri, Bobur shoh ko‘chasi, "Digital City" binosi.</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4" />
-                <span>+998 50 772 31 08</span>
-              </div>
+            <div className="flex gap-2 mt-8">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="w-10 h-10 flex items-center justify-center border border-border hover:border-foreground transition-colors"
+                >
+                  <social.icon className="w-4 h-4" strokeWidth={1.5} />
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="font-semibold text-white mb-4">{t("colServices")}</h3>
-            <ul className="space-y-3">
-              {footerLinks.services.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-white transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h3 className="font-semibold text-white mb-4">{t("colContact")}</h3>
-            <ul className="space-y-3">
-              {footerLinks.contact.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    target={link.target}
-                    className="text-sm text-muted-foreground hover:text-white transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Navigation */}
-          <div>
-            <h3 className="font-semibold text-white mb-4">{t("colNav")}</h3>
-            <ul className="space-y-3">
-              {footerLinks.navigation.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-white transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {columns.map((col, i) => (
+            <div key={col.title} className={i === 2 ? "col-span-2 lg:col-span-3" : "lg:col-span-2"}>
+              <h3 className="eyebrow text-muted-foreground mb-5">{col.title}</h3>
+              <ul className="space-y-3">
+                {col.links.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      {...("external" in link ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                      className="font-light hover:opacity-60 transition-opacity break-all sm:break-normal"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
-        {/* Bottom Bar */}
-        <div className="py-6 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Dream Tech. {t("rights")}
-          </p>
-          
-          {/* Social Links */}
-          <div className="flex items-center gap-4">
-            {socialLinks.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                target={social.target}
-                rel="noopener noreferrer"
-                aria-label={social.label}
-                className="p-2 rounded-lg text-muted-foreground hover:text-white hover:bg-white/5 transition-all"
-              >
-                <social.icon className="w-5 h-5" />
-              </a>
-            ))}
-          </div>
+        {/* Wordmark */}
+        <div
+          aria-hidden
+          className="display font-medium uppercase leading-[0.8] tracking-[-0.04em] whitespace-nowrap text-[clamp(3rem,14.2vw,13rem)] select-none text-foreground/95 -mb-[0.06em]"
+        >
+          DreamTech
+        </div>
+
+        <div className="flex flex-col sm:flex-row justify-between gap-3 py-6 border-t border-border eyebrow text-muted-foreground">
+          <p>© {new Date().getFullYear()} Dream Tech</p>
+          <p>{t("rights")}</p>
         </div>
       </div>
     </footer>

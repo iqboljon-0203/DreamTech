@@ -120,6 +120,30 @@
         "p18": {
             "desc": "Veterinariya va agro preparatlar bo'yicha 1000+ mahsulotli onlayn katalog. Kategoriyalar bo'yicha filtrlash va mutaxassis konsultatsiyasi bloki bilan.",
             "cat": "E-commerce"
+        },
+        "p20": {
+          "desc": "Toshkentda gaz qozonlari va maishiy texnikani ta'mirlash xizmati uchun sayt. 24/7 usta chaqirish, xizmatlar ro'yxati, mijoz sharhlari va onlayn ariza formasi bilan.",
+          "cat": "Xizmat Sayti"
+        },
+        "p21": {
+          "desc": "Dream Tech agentligining rasmiy sayti. Uch tilda (o'zbek, rus, ingliz), xizmatlar, portfolio, narx kalkulyatori va onlayn ariza formasi bilan.",
+          "cat": "Korporativ Sayt"
+        },
+        "p22": {
+          "desc": "Elektr jihozlari, kabel va yoritish mahsulotlari distribyutori uchun buyurtma boti. AKFIX, CHINT, UZKABEL va boshqa brendlar mahsulotlariga Telegram orqali buyurtma berish.",
+          "cat": "Telegram Bot"
+        },
+        "p23": {
+          "desc": "Arenauz platformasi uchun Telegram bot va Mini App. Xizmatdan to'g'ridan-to'g'ri Telegram ichida foydalanish mumkin.",
+          "cat": "Telegram Bot"
+        },
+        "p24": {
+          "desc": "Pro Hisobchi uchun Telegram bot va Mini App. Ilova qo'shimcha o'rnatishsiz Telegram ichida ishga tushadi.",
+          "cat": "Telegram Bot"
+        },
+        "p25": {
+          "desc": "OneGoPost uchun Telegram bot va Mini App. Xizmat Telegram ichida bir bosishda ishga tushadi.",
+          "cat": "Telegram Bot"
         }
     }
   },

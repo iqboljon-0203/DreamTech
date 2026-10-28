@@ -120,6 +120,30 @@
         "p18": {
           "desc": "Online catalog with 1000+ veterinary and agricultural products. Category filtering and expert consultation block.",
           "cat": "E-commerce"
+        },
+        "p20": {
+          "desc": "Website for a gas boiler and home appliance repair service in Tashkent. 24/7 technician call-out, service list, customer reviews, and an online request form.",
+          "cat": "Service Website"
+        },
+        "p21": {
+          "desc": "The official Dream Tech agency website. Trilingual (Uzbek, Russian, English) with services, portfolio, a price calculator, and an online request form.",
+          "cat": "Corporate Website"
+        },
+        "p22": {
+          "desc": "Ordering bot for a distributor of electrical equipment, cable, and lighting. Customers order AKFIX, CHINT, UZKABEL, and other brands directly in Telegram.",
+          "cat": "Telegram Bot"
+        },
+        "p23": {
+          "desc": "Telegram bot and Mini App for the Arenauz platform. The service runs directly inside Telegram.",
+          "cat": "Telegram Bot"
+        },
+        "p24": {
+          "desc": "Telegram bot and Mini App for Pro Hisobchi. The app launches inside Telegram with no extra install.",
+          "cat": "Telegram Bot"
+        },
+        "p25": {
+          "desc": "Telegram bot and Mini App for OneGoPost. The service launches in Telegram with a single tap.",
+          "cat": "Telegram Bot"
         }
     }
   },
