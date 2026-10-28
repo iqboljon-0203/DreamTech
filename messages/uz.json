@@ -51,6 +51,13 @@
     "description": "Bizning so'nggi loyihalarimiz va bizneslarga qanday yordam berayotganimiz bilan tanishing.",
     "viewCase": "Saytga o'tish",
     "viewAll": "Barcha Loyihalar",
+    "filters": {
+      "all": "Barchasi",
+      "corporate": "Korporativ",
+      "ecommerce": "E-commerce",
+      "websites": "Veb-saytlar",
+      "bots": "Telegram botlar"
+    },
     "projects": {
         "p1": { 
           "desc": "BAA ning Dubay shahridagi hashamatli parfyumeriya brendi uchun premium onlayn do‘kon. Eksklyuziv dizayn va qulay xarid tizimi.",

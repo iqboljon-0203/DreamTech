@@ -5,6 +5,7 @@ import "../globals.css";
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 import { ScrollToTop } from "@/components/scroll-to-top";
+import { SITE_URL, INSTAGRAM_URL, localeUrl } from "@/lib/site";
 
 const onest = Onest({
   variable: "--font-onest",
@@ -24,12 +25,12 @@ export async function generateMetadata({
   params
 }: {
   params: Promise<{locale: string}>;
-}) {
+}): Promise<Metadata> {
   const {locale} = await params;
   const t = await getTranslations({locale, namespace: 'Metadata'});
  
   return {
-    metadataBase: new URL('https://dream-tech.uz'),
+    metadataBase: new URL(SITE_URL),
     title: t('title'),
     description: t('description'),
     keywords: [
@@ -62,11 +63,11 @@ export async function generateMetadata({
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: `https://dream-tech.uz/${locale}`,
+      url: localeUrl(locale),
       siteName: "Dream Tech",
       images: [
         {
-          url: '/logo-dark.jpg',
+          url: '/og-image.jpg',
           width: 1200,
           height: 630,
           alt: 'Dream Tech Logo',
@@ -79,7 +80,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: t('title'),
       description: t('description'),
-      images: ['/logo-dark.jpg'],
+      images: ['/og-image.jpg'],
     },
     robots: {
       index: true,
@@ -93,11 +94,12 @@ export async function generateMetadata({
       },
     },
     alternates: {
-      canonical: `https://dream-tech.uz/${locale}`,
+      canonical: localeUrl(locale),
       languages: {
-        'uz': 'https://dream-tech.uz/uz',
-        'ru': 'https://dream-tech.uz/ru',
-        'en': 'https://dream-tech.uz/en',
+        'uz': localeUrl('uz'),
+        'ru': localeUrl('ru'),
+        'en': localeUrl('en'),
+        'x-default': localeUrl('uz'),
       },
     },
     manifest: '/manifest.json',
@@ -143,8 +145,8 @@ export default async function LocaleLayout({
                 "@context": "https://schema.org",
                 "@type": "Organization",
                 "name": "Dream Tech",
-                "url": "https://dream-tech.uz",
-                "logo": "https://dream-tech.uz/logo-dark.jpg",
+                "url": SITE_URL,
+                "logo": `${SITE_URL}/logo-dark.jpg`,
                 "contactPoint": {
                    "@type": "ContactPoint",
                    "telephone": "+998 50 772 31 08",
@@ -154,7 +156,7 @@ export default async function LocaleLayout({
                 },
                 "sameAs": [
                   "https://t.me/dream_tech_manager",
-                  "https://instagram.com/dreamtech"
+                  INSTAGRAM_URL
                 ]
               })
             }}

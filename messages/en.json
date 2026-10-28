@@ -51,6 +51,13 @@
     "description": "Explore our latest projects and see how we help businesses grow.",
     "viewCase": "View Project",
     "viewAll": "View All Projects",
+    "filters": {
+      "all": "All",
+      "corporate": "Corporate",
+      "ecommerce": "E-commerce",
+      "websites": "Websites",
+      "bots": "Telegram Bots"
+    },
     "projects": {
         "p1": { 
           "desc": "Premium online store for a luxury perfume brand in Dubai, UAE. Exclusive design and convenient shopping system.",

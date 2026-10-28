@@ -5,10 +5,11 @@ import { useTranslations } from "next-intl";
 import { Instagram, Send } from "lucide-react";
 import { ArrowButton, Eyebrow, Reveal } from "@/components/ui/premium";
 import { DotField } from "@/components/ui/dot-field";
+import { INSTAGRAM_URL } from "@/lib/site";
 
 const socialLinks = [
   { icon: Send, href: "https://t.me/dream_tech_manager", label: "Telegram" },
-  { icon: Instagram, href: "https://instagram.com/dream_tech_uz", label: "Instagram" },
+  { icon: Instagram, href: INSTAGRAM_URL, label: "Instagram" },
 ];
 
 export function Footer() {

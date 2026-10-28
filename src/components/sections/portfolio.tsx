@@ -105,7 +105,6 @@ const projects: Project[] = [
     category: "Websites",
     image: "/portfolio/express_clean.jpg",
     tags: ["Next.js", "React", "Tailwind CSS"],
-    link: "https://expressclean.uz/"
   },
   {
     id: "p2",
@@ -136,8 +135,7 @@ const projects: Project[] = [
     title: "TEKGRUP",
     category: "Korporativ",
     image: "/portfolio/tekgrup_main.png",
-    tags: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS"],
-    link: "https://tekgrup.uz/"
+    tags: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS"]
   },
   {
     id: "p5",
@@ -152,8 +150,7 @@ const projects: Project[] = [
     title: "Solo Study",
     category: "Websites",
     image: "/portfolio/solostudy_main.png",
-    tags: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS"],
-    link: "https://solo-study.uz"
+    tags: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS"]
   },
   {
     id: "p21",
@@ -197,7 +194,14 @@ const projects: Project[] = [
   }
 ];
 
-const categories = ["All", "Korporativ", "E-commerce", "Websites", "Telegram Bots"];
+// value = Project.category, key = Portfolio.filters.* translation
+const categories = [
+  { value: "All", key: "all" },
+  { value: "Korporativ", key: "corporate" },
+  { value: "E-commerce", key: "ecommerce" },
+  { value: "Websites", key: "websites" },
+  { value: "Telegram Bots", key: "bots" },
+];
 const INITIAL_COUNT = 6;
 
 // Chat-style preview used in place of a screenshot for Telegram bot projects
@@ -305,19 +309,19 @@ export function PortfolioSection() {
           <div className="flex flex-wrap border border-border self-start md:self-end">
             {categories.map((category) => (
               <button
-                key={category}
+                key={category.value}
                 onClick={() => {
-                  setActiveCategory(category);
+                  setActiveCategory(category.value);
                   setShowAll(false);
                 }}
                 className={cn(
                   "eyebrow px-4 h-10 transition-colors",
-                  activeCategory === category
+                  activeCategory === category.value
                     ? "bg-foreground text-background"
                     : "text-muted-foreground hover:text-foreground"
                 )}
               >
-                {category}
+                {t(`filters.${category.key}`)}
               </button>
             ))}
           </div>
