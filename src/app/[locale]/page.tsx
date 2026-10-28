@@ -33,7 +33,7 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="tone-dark relative min-h-[100svh] overflow-hidden flex flex-col">
+      <section id="hero" className="tone-dark relative min-h-[100svh] overflow-hidden flex flex-col">
         <DotField />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent pointer-events-none" />
 

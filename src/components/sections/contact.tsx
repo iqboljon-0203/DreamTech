@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Check, ChevronDown } from "lucide-react";
 import { ArrowButton, Eyebrow, Reveal } from "@/components/ui/premium";
+import { track } from "@/lib/analytics";
 
 const fieldClass =
   "w-full bg-transparent border-0 border-b border-input py-3 text-lg font-light text-foreground placeholder:text-foreground/30 focus:outline-none focus:border-foreground transition-colors";
@@ -53,6 +54,8 @@ export function ContactSection() {
       });
 
       if (response.ok) {
+          // GA4 recommended lead event; no personal data is sent
+          track("generate_lead", { form: "contact", project_type: formState.projectType });
           setIsSubmitted(true);
           setFormState({ name: "", phone: "", telegram: "", projectType: "", message: "" });
       } else {
